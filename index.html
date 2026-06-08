@@ -839,7 +839,74 @@
     }
 
   
-</style>
+
+    /* Mobile optimisation */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .music-grid,
+      .platforms-grid,
+      .members-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .profile-modal {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 16px;
+      }
+
+      .profile-modal-card {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 32px);
+        margin: auto 0;
+        overflow-y: auto;
+        border-radius: 22px;
+      }
+
+      .profile-modal-body {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 18px;
+      }
+
+      .profile-modal-visual {
+        min-height: 220px;
+        max-height: 320px;
+      }
+
+      .profile-modal-copy h3 {
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+        line-height: 1.05;
+      }
+
+      .profile-modal-details {
+        gap: 6px;
+      }
+
+      .profile-modal-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding: 8px 0;
+      }
+
+      .profile-modal-label,
+      .profile-modal-value {
+        font-size: 0.98rem;
+      }
+
+      .profile-modal-close {
+        position: sticky;
+        top: 12px;
+        margin-left: auto;
+      }
+    }
+
+  </style>
 </head>
 <body>
   <header class="topbar">
