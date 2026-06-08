@@ -1183,6 +1183,81 @@
       }
     }
 
+  
+    .downloads-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .download-card {
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+    .download-preview {
+      aspect-ratio: 3 / 4;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      margin-bottom: 16px;
+    }
+    .download-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .download-card h3 {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: 1.22rem;
+    }
+    .download-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      min-height: 48px;
+    }
+    .download-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.22s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: var(--text);
+      background: rgba(255,255,255,0.05);
+      text-align: center;
+    }
+    .download-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(146, 244, 255, 0.34);
+    }
+    .download-btn.primary {
+      color: #05101a;
+      background: linear-gradient(90deg, var(--cyan), #f2d8ff 88%);
+      border: 0;
+      box-shadow: 0 12px 28px rgba(146, 244, 255, 0.18);
+    }
+
   </style>
 </head>
 <body>
@@ -1196,6 +1271,7 @@
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#members" data-i18n="nav_members">Members</a>
         <a href="#music" data-i18n="nav_music">Music</a>
+        <a href="#downloads" data-i18n="nav_wallpapers">Wallpapers</a>
         <a href="#media" data-i18n="nav_platforms">Platforms</a>
         <button class="lang-toggle" type="button" id="langToggleBtn" aria-label="Switch language">한국어</button>
       </nav>
@@ -1384,6 +1460,80 @@
         </div>
       </div>
     </section>
+
+
+    <section class="section" id="downloads">
+      <div class="container">
+        <span class="eyebrow" data-i18n="downloads_eyebrow">Wallpapers</span>
+        <h2 data-i18n="downloads_title">CONTROL Wallpapers</h2>
+        <p class="section-copy" style="max-width: 760px; color: var(--muted);">
+          <span data-i18n="downloads_body">Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.</span>
+        </p>
+
+        <div class="downloads-grid">
+          <article class="download-card">
+            <div class="download-preview">
+              <img src="downloads/hj-wp-mp.png" alt="Haejun wallpaper preview">
+            </div>
+            <h3>Haejun</h3>
+            <p data-i18n="animal_haejun">The Wolf</p>
+            <div class="download-links">
+              <a class="download-btn primary" href="downloads/hj-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
+              <a class="download-btn" href="downloads/hj-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div class="download-preview">
+              <img src="downloads/jw-wp-mp.png" alt="Jinwoo wallpaper preview">
+            </div>
+            <h3>Jinwoo</h3>
+            <p data-i18n="animal_jinwoo">The Falcon</p>
+            <div class="download-links">
+              <a class="download-btn primary" href="downloads/jw-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
+              <a class="download-btn" href="downloads/jw-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div class="download-preview">
+              <img src="downloads/jl-wp-mp.png" alt="Jayden Lee wallpaper preview">
+            </div>
+            <h3>Jayden Lee</h3>
+            <p data-i18n="animal_jayden">The Lion</p>
+            <div class="download-links">
+              <a class="download-btn primary" href="downloads/jl-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
+              <a class="download-btn" href="downloads/jl-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div class="download-preview">
+              <img src="downloads/mj-wp-mp.png" alt="Minjae wallpaper preview">
+            </div>
+            <h3>Minjae</h3>
+            <p data-i18n="animal_minjae">The Cobra</p>
+            <div class="download-links">
+              <a class="download-btn primary" href="downloads/mj-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
+              <a class="download-btn" href="downloads/mj-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <div class="download-preview">
+              <img src="downloads/sh-wp-mp.png" alt="Seonho wallpaper preview">
+            </div>
+            <h3>Seonho</h3>
+            <p data-i18n="animal_seonho">The Bear</p>
+            <div class="download-links">
+              <a class="download-btn primary" href="downloads/sh-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
+              <a class="download-btn" href="downloads/sh-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
 
     <section class="section" id="media">
       <div class="container">
@@ -2107,11 +2257,17 @@
         nav_about: "About",
         nav_members: "Members",
         nav_music: "Music",
+        nav_wallpapers: "Wallpapers",
         nav_platforms: "Platforms",
         hero_eyebrow: "Virtual Group",
         hero_title: "Future in motion.",
         hero_cta_members: "Members",
         hero_cta_music: "Music",
+        downloads_eyebrow: "Wallpapers",
+        downloads_title: "CONTROL Wallpapers",
+        downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.",
+        download_desktop: "Desktop",
+        download_mobile: "Mobile",
         release_date: "Release Date: 11th June 2026",
         about_title: "About",
         about_1_title: "About 1NFUZE",
@@ -2154,11 +2310,17 @@
         nav_about: "소개",
         nav_members: "멤버",
         nav_music: "음악",
+        nav_wallpapers: "월페이퍼",
         nav_platforms: "플랫폼",
         hero_eyebrow: "버추얼 그룹",
         hero_title: "움직이는 미래.",
         hero_cta_members: "멤버",
         hero_cta_music: "음악",
+        downloads_eyebrow: "월페이퍼",
+        downloads_title: "CONTROL 월페이퍼",
+        downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요. GitHub Pages에서는 이미지 파일을 downloads/ 같은 정적 폴더에 넣으면 이 버튼들이 바로 연결됩니다.",
+        download_desktop: "데스크톱",
+        download_mobile: "모바일",
         release_date: "발매일: 2026년 6월 11일",
         about_title: "소개",
         about_1_title: "1NFUZE 소개",
