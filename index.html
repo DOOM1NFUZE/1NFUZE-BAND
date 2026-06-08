@@ -83,6 +83,21 @@
       color: var(--text);
       background: rgba(255,255,255,0.06);
     }
+    .lang-toggle {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: 0.25s ease;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .lang-toggle:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.08);
+    }
     .hero {
       padding: 56px 0 30px;
     }
@@ -1178,10 +1193,11 @@
         <span>1NFUZE</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#members">Members</a>
-        <a href="#music">Music</a>
-        <a href="#media">Platforms</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#members" data-i18n="nav_members">Members</a>
+        <a href="#music" data-i18n="nav_music">Music</a>
+        <a href="#media" data-i18n="nav_platforms">Platforms</a>
+        <button class="lang-toggle" type="button" id="langToggleBtn" aria-label="Switch language">한국어</button>
       </nav>
     </div>
   </header>
@@ -1190,11 +1206,11 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Virtual Group</div>
-          <h1><span class="gradient-text">1NFUZE</span><br />Future in motion.</h1>
+          <div class="eyebrow" data-i18n="hero_eyebrow">Virtual Group</div>
+          <h1><span class="gradient-text">1NFUZE</span><br /><span data-i18n="hero_title">Future in motion.</span></h1>
           <div class="hero-actions">
-            <a class="cta cta-primary" href="#members">Members</a>
-            <a class="cta cta-secondary" href="#music">Music</a>
+            <a class="cta cta-primary" href="#members" data-i18n="hero_cta_members">Members</a>
+            <a class="cta cta-secondary" href="#music" data-i18n="hero_cta_music">Music</a>
           </div>
         </div>
 
@@ -1202,7 +1218,7 @@
           <div class="logo-frame" aria-label="1NFUZE official logo stage panel">
             <img src="images/logo.png" alt="1NFUZE official logo" />
           </div>
-          <p class="release-date">Release Date: 11th June 2026</p>
+          <p class="release-date" data-i18n="release_date">Release Date: 11th June 2026</p>
         </aside>
       </div>
     </section>
@@ -1210,20 +1226,20 @@
     <section class="section" id="about">
       <div class="container">
         <div class="section-head">
-          <h2>About</h2>
+          <h2 data-i18n="about_title">About</h2>
         </div>
         <div class="panel-grid">
           <div class="panel-card">
-            <h3>About 1NFUZE</h3>
-            <p>1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.</p>
+            <h3 data-i18n="about_1_title">About 1NFUZE</h3>
+            <p data-i18n="about_1_body">1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.</p>
           </div>
           <div class="panel-card">
-            <h3>Sound &amp; Identity</h3>
-            <p>Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.</p>
+            <h3 data-i18n="about_2_title">Sound &amp; Identity</h3>
+            <p data-i18n="about_2_body">Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.</p>
           </div>
           <div class="panel-card">
-            <h3>Current Era: CONTROL</h3>
-            <p>CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.</p>
+            <h3 data-i18n="about_3_title">Current Era: CONTROL</h3>
+            <p data-i18n="about_3_body">CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.</p>
           </div>
         </div>
       </div>
@@ -1234,12 +1250,12 @@
       <div class="container">
         <div class="panel-card fan-feature-card">
           <div class="fan-feature-copy">
-            <span class="eyebrow">Fan Feature</span>
-            <h2>Which 1NFUZE member are you?</h2>
-            <p>Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.</p>
+            <span class="eyebrow" data-i18n="fan_eyebrow">Fan Feature</span>
+            <h2 data-i18n="fan_title">Which 1NFUZE member are you?</h2>
+            <p data-i18n="fan_body">Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.</p>
           </div>
           <div class="fan-feature-action">
-            <button class="cta cta-primary fan-feature-btn" type="button" id="quizLaunchBtn">Start the Quiz</button>
+            <button class="cta cta-primary fan-feature-btn" type="button" id="quizLaunchBtn" data-i18n="fan_button">Start the Quiz</button>
           </div>
         </div>
       </div>
@@ -1248,7 +1264,7 @@
     <section class="section" id="members">
       <div class="container">
         <div class="section-head">
-          <h2>Members</h2>
+          <h2 data-i18n="members_title">Members</h2>
         </div>
 
         <div class="members-grid">
@@ -1259,7 +1275,7 @@
             </div>
             <h3>Haejun <span style="color: var(--muted); font-weight: 600;">(해준)</span></h3>
             <div class="member-links">
-              <span class="chip">The Wolf</span>
+              <span class="chip" data-i18n="animal_haejun">The Wolf</span>
             </div>
           </article>
 
@@ -1270,7 +1286,7 @@
             </div>
             <h3>Jinwoo <span style="color: var(--muted); font-weight: 600;">(진우)</span></h3>
             <div class="member-links">
-              <span class="chip">The Falcon</span>
+              <span class="chip" data-i18n="animal_jinwoo">The Falcon</span>
             </div>
           </article>
 
@@ -1281,7 +1297,7 @@
             </div>
             <h3>Jayden <span style="color: var(--muted); font-weight: 600;">(제이든 리)</span></h3>
             <div class="member-links">
-              <span class="chip">The Lion</span>
+              <span class="chip" data-i18n="animal_jayden">The Lion</span>
             </div>
           </article>
 
@@ -1293,7 +1309,7 @@
             <h3>Minjae <span style="color: var(--muted); font-weight: 600;">(민재)</span></h3>
             <div class="member-links">
               
-              <span class="chip">The Cobra</span>
+              <span class="chip" data-i18n="animal_minjae">The Cobra</span>
             </div>
           </article>
 
@@ -1305,7 +1321,7 @@
             <h3>Seonho <span style="color: var(--muted); font-weight: 600;">(선호)</span></h3>
             <div class="member-links">
               
-              <span class="chip">The Bear</span>
+              <span class="chip" data-i18n="animal_seonho">The Bear</span>
             </div>
           </article>
         </div>
@@ -1315,8 +1331,8 @@
     <section class="section" id="music">
       <div class="container">
         <div class="section-head">
-          <h2>The Sound of Control</h2>
-          <p>Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.</p>
+          <h2 data-i18n="sound_title">The Sound of Control</h2>
+          <p data-i18n="sound_body">Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.</p>
         </div>
         <div class="sound-grid">
           <article class="panel-card sound-panel sound-art">
@@ -1329,7 +1345,7 @@
                 <img id="trackCover" src="images/logo.png" alt="1NFUZE track artwork" onerror="this.style.display='none'">
               </div>
               <div class="player-info">
-                <span class="player-now">Now Playing</span>
+                <span class="player-now" data-i18n="player_now">Now Playing</span>
                 <h3 class="player-title" id="trackTitle">달이다 (Infuze)</h3>
               </div>
             </div>
@@ -1372,14 +1388,14 @@
     <section class="section" id="media">
       <div class="container">
         <div class="section-head">
-          <h2>Listen to 1NFUZE</h2>
-          <p>Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.</p>
+          <h2 data-i18n="platforms_title">Listen to 1NFUZE</h2>
+          <p data-i18n="platforms_body">Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.</p>
         </div>
         <div class="stream-section-card panel-card">
           <div class="stream-section-copy">
-            <span class="sound-kicker">Official Platforms</span>
-            <h3>Official listening platforms</h3>
-            <p>Stream the current release through the official 1NFUZE destinations below.</p>
+            <span class="sound-kicker" data-i18n="platforms_kicker">Official Platforms</span>
+            <h3 data-i18n="platforms_card_title">Official listening platforms</h3>
+            <p data-i18n="platforms_card_body">Stream the current release through the official 1NFUZE destinations below.</p>
           </div>
           <div class="stream-links stream-links-section" id="streamLinks"></div>
         </div>
@@ -1655,7 +1671,7 @@
     loadTrack(0, false);
   </script>
 
-<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p style="margin:0; width:100%; text-align:center;">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
+<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p style="margin:0; width:100%; text-align:center;" data-i18n="footer_copy">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
 
   <div class="profile-modal" id="profileModal" aria-hidden="true">
     <div class="profile-modal-card" role="dialog" aria-modal="true" aria-labelledby="profileModalName">
@@ -1665,7 +1681,7 @@
           <img id="profileModalImage" src="" alt="">
         </div>
         <div class="profile-modal-copy">
-          <span class="profile-modal-kicker">1NFUZE Member Profile</span>
+          <span class="profile-modal-kicker" data-i18n="profile_kicker">1NFUZE Member Profile</span>
           <h3 id="profileModalName"></h3>
           <div class="profile-modal-details" id="profileModalDetails"></div>
         </div>
@@ -1674,67 +1690,87 @@
   </div>
 
 
+  
   <script>
     const memberProfiles = {
       haejun: {
-        name: "Haejun (해준)",
+        name: { en: "Haejun (해준)", ko: "해준 (Haejun)" },
         image: "images/hj.png.png",
         details: {
-          "Birthday": "March 14, 2005",
-          "Birth Sign": "Pisces",
-          "Birth Place": "Suwon, Gyeonggi-do, South Korea",
-          "Favourite Movie": "Train to Busan",
-          "Favourite Bands": "TXT • The 1975",
-          "Quote": "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about."
+          "Birthday": { en: "March 14, 2005", ko: "2005년 3월 14일" },
+          "Birth Sign": { en: "Pisces", ko: "물고기자리" },
+          "Birth Place": { en: "Suwon, Gyeonggi-do, South Korea", ko: "대한민국 경기도 수원" },
+          "Favourite Movie": { en: "Train to Busan", ko: "부산행" },
+          "Favourite Bands": { en: "TXT • The 1975", ko: "TXT • The 1975" },
+          "Quote": { en: "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about.", ko: "항상 응원해 줘서 고마워요. 여러분이 웃을 수 있도록 더 열심히 할게요." }
         }
       },
       jinwoo: {
-        name: "Jinwoo (진우)",
+        name: { en: "Jinwoo (진우)", ko: "진우 (Jinwoo)" },
         image: "images/jw.png",
         details: {
-          "Birthday": "August 22, 2004",
-          "Birth Sign": "Leo",
-          "Birth Place": "Busan, South Korea",
-          "Favourite Movie": "Your Name",
-          "Favourite Bands": "SEVENTEEN • Bruno Mars",
-          "Quote": "Your support gives me strength every day. Let’s make even more good memories together."
+          "Birthday": { en: "August 22, 2004", ko: "2004년 8월 22일" },
+          "Birth Sign": { en: "Leo", ko: "사자자리" },
+          "Birth Place": { en: "Busan, South Korea", ko: "대한민국 부산" },
+          "Favourite Movie": { en: "Your Name", ko: "너의 이름은." },
+          "Favourite Bands": { en: "SEVENTEEN • Bruno Mars", ko: "SEVENTEEN • Bruno Mars" },
+          "Quote": { en: "Your support gives me strength every day. Let’s make even more good memories together.", ko: "여러분의 응원이 매일 제 힘이 돼요. 앞으로도 좋은 추억 많이 만들어요." }
         }
       },
       jayden: {
-        name: "Jayden Lee (제이든 리)",
+        name: { en: "Jayden Lee (제이든 리)", ko: "제이든 리 (Jayden Lee)" },
         image: "images/jl.png",
         details: {
-          "Birthday": "November 9, 2003",
-          "Birth Sign": "Scorpio",
-          "Birth Place": "Seoul, South Korea",
-          "Favourite Movie": "La La Land",
-          "Favourite Bands": "EXO • The Weeknd",
-          "Quote": "I always want to show you my best side. Please stay with us and let’s keep moving forward together."
+          "Birthday": { en: "November 9, 2003", ko: "2003년 11월 9일" },
+          "Birth Sign": { en: "Scorpio", ko: "전갈자리" },
+          "Birth Place": { en: "Seoul, South Korea", ko: "대한민국 서울" },
+          "Favourite Movie": { en: "La La Land", ko: "라라랜드" },
+          "Favourite Bands": { en: "EXO • The Weeknd", ko: "EXO • The Weeknd" },
+          "Quote": { en: "I always want to show you my best side. Please stay with us and let’s keep moving forward together.", ko: "항상 제 최고의 모습을 보여드리고 싶어요. 앞으로도 저희와 함께 걸어가 주세요." }
         }
       },
       minjae: {
-        name: "Minjae (민재)",
+        name: { en: "Minjae (민재)", ko: "민재 (Minjae)" },
         image: "images/mj.png",
         details: {
-          "Birthday": "January 27, 2004",
-          "Birth Sign": "Aquarius",
-          "Birth Place": "Incheon, South Korea",
-          "Favourite Movie": "Baby Driver",
-          "Favourite Bands": "Stray Kids • Post Malone",
-          "Quote": "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you."
+          "Birthday": { en: "January 27, 2004", ko: "2004년 1월 27일" },
+          "Birth Sign": { en: "Aquarius", ko: "물병자리" },
+          "Birth Place": { en: "Incheon, South Korea", ko: "대한민국 인천" },
+          "Favourite Movie": { en: "Baby Driver", ko: "베이비 드라이버" },
+          "Favourite Bands": { en: "Stray Kids • Post Malone", ko: "Stray Kids • Post Malone" },
+          "Quote": { en: "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you.", ko: "저를 믿어 줄 때마다 더 자신감이 생겨요. 저도 그 에너지를 다시 돌려드리고 싶어요." }
         }
       },
       seonho: {
-        name: "Seonho (선호)",
+        name: { en: "Seonho (선호)", ko: "선호 (Seonho)" },
         image: "images/sh.png",
         details: {
-          "Birthday": "June 3, 2005",
-          "Birth Sign": "Gemini",
-          "Birth Place": "Daegu, South Korea",
-          "Favourite Movie": "Spider-Man: Into the Spider-Verse",
-          "Favourite Bands": "NCT DREAM • Keshi",
-          "Quote": "Thank you for looking after us so warmly. I hope our music can stay by your side every day."
+          "Birthday": { en: "June 3, 2005", ko: "2005년 6월 3일" },
+          "Birth Sign": { en: "Gemini", ko: "쌍둥이자리" },
+          "Birth Place": { en: "Daegu, South Korea", ko: "대한민국 대구" },
+          "Favourite Movie": { en: "Spider-Man: Into the Spider-Verse", ko: "스파이더맨: 뉴 유니버스" },
+          "Favourite Bands": { en: "NCT DREAM • Keshi", ko: "NCT DREAM • Keshi" },
+          "Quote": { en: "Thank you for looking after us so warmly. I hope our music can stay by your side every day.", ko: "늘 따뜻하게 아껴 주셔서 감사해요. 저희 음악이 여러분의 하루 곁에 머물면 좋겠어요." }
         }
+      }
+    };
+
+    const detailLabels = {
+      en: {
+        "Birthday": "Birthday",
+        "Birth Sign": "Birth Sign",
+        "Birth Place": "Birth Place",
+        "Favourite Movie": "Favourite Movie",
+        "Favourite Bands": "Favourite Bands",
+        "Quote": "Quote"
+      },
+      ko: {
+        "Birthday": "생일",
+        "Birth Sign": "별자리",
+        "Birth Place": "출생지",
+        "Favourite Movie": "좋아하는 영화",
+        "Favourite Bands": "좋아하는 아티스트",
+        "Quote": "한마디"
       }
     };
 
@@ -1751,12 +1787,15 @@
       function openProfileModal(memberKey) {
         const profile = memberProfiles[memberKey];
         if (!profile) return;
-        profileModalName.textContent = profile.name;
+        const lang = window.currentLanguage || 'en';
+        profileModalName.textContent = profile.name[lang] || profile.name.en;
         profileModalDetails.innerHTML = Object.entries(profile.details).map(([label, value]) => {
-          return `<div class="profile-modal-row"><div class="profile-modal-label">${label}:</div><div class="profile-modal-value">${value}</div></div>`;
+          const labelText = (detailLabels[lang] && detailLabels[lang][label]) ? detailLabels[lang][label] : label;
+          const valueText = value[lang] || value.en;
+          return `<div class="profile-modal-row"><div class="profile-modal-label">${labelText}:</div><div class="profile-modal-value">${valueText}</div></div>`;
         }).join('');
         profileModalImage.src = profile.image;
-        profileModalImage.alt = profile.name + " profile image";
+        profileModalImage.alt = (profile.name[lang] || profile.name.en) + " profile image";
         profileModal.classList.add('active');
         profileModal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
@@ -1780,13 +1819,8 @@
         if (event.key === 'Escape' && profileModal.classList.contains('active')) closeProfileModal();
       });
     }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', setupProfilePopups);
-    } else {
-      setupProfilePopups();
-    }
   </script>
+
 
 
   <div class="quiz-modal" id="memberQuizModal" aria-hidden="true">
@@ -1794,10 +1828,10 @@
       <button class="quiz-close" id="quizCloseBtn" type="button" aria-label="Close quiz">×</button>
       <div class="quiz-inner">
         <div id="quizStartView">
-          <span class="quiz-kicker">Fan Quiz</span>
-          <h2 class="quiz-title" id="quizTitle">Which 1NFUZE member are you?</h2>
-          <p class="quiz-subtitle">Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.</p>
-          <button class="quiz-btn quiz-btn-primary" type="button" id="quizStartBtn">Start Quiz</button>
+          <span class="quiz-kicker" data-i18n="quiz_kicker">Fan Quiz</span>
+          <h2 class="quiz-title" id="quizTitle" data-i18n="quiz_title">Which 1NFUZE member are you?</h2>
+          <p class="quiz-subtitle" data-i18n="quiz_subtitle">Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.</p>
+          <button class="quiz-btn quiz-btn-primary" type="button" id="quizStartBtn" data-i18n="quiz_start">Start Quiz</button>
         </div>
 
         <div id="quizQuestionView" style="display:none;">
@@ -1805,23 +1839,23 @@
           <h3 class="quiz-question" id="quizQuestionText"></h3>
           <div class="quiz-options" id="quizOptions"></div>
           <div class="quiz-nav">
-            <button class="quiz-btn" type="button" id="quizBackBtn">Back</button>
-            <button class="quiz-btn" type="button" id="quizRestartBtn">Restart</button>
+            <button class="quiz-btn" type="button" id="quizBackBtn" data-i18n="quiz_back">Back</button>
+            <button class="quiz-btn" type="button" id="quizRestartBtn" data-i18n="quiz_restart">Restart</button>
           </div>
         </div>
 
         <div class="quiz-result" id="quizResultView">
-          <span class="quiz-kicker">Quiz Result</span>
+          <span class="quiz-kicker" data-i18n="quiz_result_kicker">Quiz Result</span>
           <div class="quiz-result-wrap">
             <div class="quiz-result-image">
               <img id="quizResultImage" src="" alt="">
             </div>
             <div class="quiz-result-copy">
-              <div class="quiz-result-tag">You are...</div>
+              <div class="quiz-result-tag" data-i18n="quiz_you_are">You are...</div>
               <h3 id="quizResultName"></h3>
               <p id="quizResultBlurb"></p>
               <p id="quizResultBlurb2"></p>
-              <button class="quiz-btn quiz-btn-primary" type="button" id="quizRetakeBtn">Take Quiz Again</button>
+              <button class="quiz-btn quiz-btn-primary" type="button" id="quizRetakeBtn" data-i18n="quiz_retake">Take Quiz Again</button>
             </div>
           </div>
         </div>
@@ -1830,84 +1864,115 @@
   </div>
 
 
+  
   <script>
     const quizProfiles = {
       haejun: {
-        name: "Haejun",
+        name: { en: "Haejun", ko: "해준" },
         image: "images/hj.png.png",
-        blurb: "You have Haejun’s sharp, performance-driven energy. You come across as stylish, expressive, and naturally magnetic, with the kind of confidence that lights up a room without needing to shout.",
-        blurb2: "People are drawn to your cool presence, quick instincts, and creative streak. Underneath that polished edge, you also have warmth, loyalty, and a quiet determination that keeps you moving forward."
+        blurb: {
+          en: "You have Haejun’s sharp, performance-driven energy. You come across as stylish, expressive, and naturally magnetic, with the kind of confidence that lights up a room without needing to shout.",
+          ko: "당신은 해준의 날카롭고 퍼포먼스 중심적인 에너지를 지녔어요. 세련되고 표현력이 풍부하며, 굳이 소리치지 않아도 존재감이 빛나는 타입입니다."
+        },
+        blurb2: {
+          en: "People are drawn to your cool presence, quick instincts, and creative streak. Underneath that polished edge, you also have warmth, loyalty, and a quiet determination that keeps you moving forward.",
+          ko: "쿨한 분위기와 빠른 감각, 창의적인 면모에 사람들이 끌립니다. 세련된 인상 아래에는 따뜻함과 의리, 그리고 묵묵히 앞으로 나아가는 끈기가 숨어 있어요."
+        }
       },
       jinwoo: {
-        name: "Jinwoo",
+        name: { en: "Jinwoo", ko: "진우" },
         image: "images/jw.png",
-        blurb: "You match Jinwoo’s calm and dependable vibe. You are thoughtful, easy to be around, and the kind of person who balances a group just by being yourself.",
-        blurb2: "You have a soft charm that makes people feel comfortable, but there is real inner strength there too. Your energy is steady, genuine, and quietly unforgettable."
+        blurb: {
+          en: "You match Jinwoo’s calm and dependable vibe. You are thoughtful, easy to be around, and the kind of person who balances a group just by being yourself.",
+          ko: "당신은 진우의 차분하고 믿음직한 분위기와 닮아 있어요. 배려심이 깊고 편안한 사람이며, 있는 그대로만으로도 팀의 균형을 잡아 주는 타입입니다."
+        },
+        blurb2: {
+          en: "You have a soft charm that makes people feel comfortable, but there is real inner strength there too. Your energy is steady, genuine, and quietly unforgettable.",
+          ko: "부드러운 매력으로 사람들을 편안하게 만들지만, 그 안에는 분명한 강인함도 있습니다. 당신의 에너지는 안정적이고 진심이 느껴지며 오래 기억에 남아요."
+        }
       },
       jayden: {
-        name: "Jayden Lee",
+        name: { en: "Jayden Lee", ko: "제이든 리" },
         image: "images/jl.png",
-        blurb: "You are Jayden Lee: poised, charismatic, and born to stand at the centre. You have a natural star quality that makes people notice you, even when you are doing very little.",
-        blurb2: "There is confidence in the way you carry yourself, but also discipline and focus. You set the tone around you, and people often trust your lead because you make things feel composed and clear."
+        blurb: {
+          en: "You are Jayden Lee: poised, charismatic, and born to stand at the centre. You have a natural star quality that makes people notice you, even when you are doing very little.",
+          ko: "당신은 제이든 리 타입입니다. 침착하고 카리스마 있으며, 자연스럽게 중심에 서게 되는 사람입니다. 큰 행동을 하지 않아도 사람들의 시선을 끄는 타고난 스타성이 있어요."
+        },
+        blurb2: {
+          en: "There is confidence in the way you carry yourself, but also discipline and focus. You set the tone around you, and people often trust your lead because you make things feel composed and clear.",
+          ko: "당신에게는 자신감뿐 아니라 절제와 집중력도 함께 있습니다. 주변 분위기를 정리하고 방향을 잡아 주는 힘이 있어, 사람들이 당신의 리드를 자연스럽게 믿게 됩니다."
+        }
       },
       minjae: {
-        name: "Minjae",
+        name: { en: "Minjae", ko: "민재" },
         image: "images/mj.png",
-        blurb: "You have Minjae’s bold edge and fearless personality. You are energetic, witty, and not afraid to take up space when something matters to you.",
-        blurb2: "Your presence feels lively and memorable, with a spark that keeps things exciting. At the same time, you care deeply about the people around you and bring passion into everything you do."
+        blurb: {
+          en: "You have Minjae’s bold edge and fearless personality. You are energetic, witty, and not afraid to take up space when something matters to you.",
+          ko: "당신은 민재의 대담한 에지와 겁 없는 성격을 지녔어요. 에너지가 넘치고 센스 있으며, 중요한 순간에는 주저하지 않고 존재감을 드러내는 타입입니다."
+        },
+        blurb2: {
+          en: "Your presence feels lively and memorable, with a spark that keeps things exciting. At the same time, you care deeply about the people around you and bring passion into everything you do.",
+          ko: "당신의 존재감은 생기 있고 강렬해서 분위기를 재미있게 만듭니다. 동시에 주변 사람들을 깊이 아끼며, 무엇이든 열정을 담아 해내는 사람이기도 해요."
+        }
       },
       seonho: {
-        name: "Seonho",
+        name: { en: "Seonho", ko: "선호" },
         image: "images/sh.png",
-        blurb: "You are most like Seonho: graceful, smooth, and quietly captivating. You tend to leave a strong impression through your style, sensitivity, and the way you naturally read the room.",
-        blurb2: "You have a calm confidence that feels elegant rather than loud. People often see you as thoughtful, creative, and someone who brings balance and beauty wherever you go."
+        blurb: {
+          en: "You are most like Seonho: graceful, smooth, and quietly captivating. You tend to leave a strong impression through your style, sensitivity, and the way you naturally read the room.",
+          ko: "당신은 선호와 가장 닮아 있습니다. 우아하고 부드러우며 조용히 시선을 사로잡는 타입이에요. 스타일과 섬세함, 분위기를 읽는 감각으로 강한 인상을 남깁니다."
+        },
+        blurb2: {
+          en: "You have a calm confidence that feels elegant rather than loud. People often see you as thoughtful, creative, and someone who brings balance and beauty wherever you go.",
+          ko: "당신의 자신감은 시끄럽지 않고 우아하게 느껴집니다. 사람들은 당신을 사려 깊고 창의적이며, 가는 곳마다 균형과 아름다움을 더하는 존재로 봅니다."
+        }
       }
     };
 
     const quizQuestions = [
       {
-        question: "Your friends are planning a night out. What role do you naturally fall into?",
+        question: { en: "Your friends are planning a night out. What role do you naturally fall into?", ko: "친구들과 외출을 계획할 때, 당신은 보통 어떤 역할을 맡나요?" },
         options: [
-          { text: "I set the mood and make sure everyone feels hyped.", member: "jayden" },
-          { text: "I keep things relaxed and make sure everyone is comfortable.", member: "jinwoo" },
-          { text: "I bring the chaos and make the night memorable.", member: "minjae" },
-          { text: "I turn up stylish and become the unspoken vibe of the group.", member: "haejun" }
+          { text: { en: "I set the mood and make sure everyone feels hyped.", ko: "분위기를 끌어올리고 모두가 신나게 즐기도록 한다." }, member: "jayden" },
+          { text: { en: "I keep things relaxed and make sure everyone is comfortable.", ko: "편안한 분위기를 만들고 모두가 무리하지 않게 챙긴다." }, member: "jinwoo" },
+          { text: { en: "I bring the chaos and make the night memorable.", ko: "재미와 사건을 만들어서 잊지 못할 밤으로 만든다." }, member: "minjae" },
+          { text: { en: "I turn up stylish and become the unspoken vibe of the group.", ko: "스타일 있게 등장해서 자연스럽게 분위기의 중심이 된다." }, member: "haejun" }
         ]
       },
       {
-        question: "Pick a quality that sounds most like you.",
+        question: { en: "Pick a quality that sounds most like you.", ko: "가장 나다운 성격을 하나 고른다면?" },
         options: [
-          { text: "Elegant and observant", member: "seonho" },
-          { text: "Driven and magnetic", member: "jayden" },
-          { text: "Warm and dependable", member: "jinwoo" },
-          { text: "Bold and expressive", member: "minjae" }
+          { text: { en: "Elegant and observant", ko: "우아하고 관찰력이 좋다" }, member: "seonho" },
+          { text: { en: "Driven and magnetic", ko: "추진력이 있고 사람을 끄는 힘이 있다" }, member: "jayden" },
+          { text: { en: "Warm and dependable", ko: "따뜻하고 믿음직하다" }, member: "jinwoo" },
+          { text: { en: "Bold and expressive", ko: "대담하고 표현력이 좋다" }, member: "minjae" }
         ]
       },
       {
-        question: "If you were performing on stage, what would be your strongest point?",
+        question: { en: "If you were performing on stage, what would be your strongest point?", ko: "무대에 선다면, 당신의 가장 강한 포인트는 무엇일까요?" },
         options: [
-          { text: "My overall presence and centre energy", member: "jayden" },
-          { text: "My movement and stylish performance details", member: "haejun" },
-          { text: "My cool elegance and visual control", member: "seonho" },
-          { text: "My attitude and explosive delivery", member: "minjae" }
+          { text: { en: "My overall presence and centre energy", ko: "전체적인 존재감과 센터 같은 에너지" }, member: "jayden" },
+          { text: { en: "My movement and stylish performance details", ko: "움직임과 스타일리시한 퍼포먼스 디테일" }, member: "haejun" },
+          { text: { en: "My cool elegance and visual control", ko: "차분한 우아함과 비주얼 장악력" }, member: "seonho" },
+          { text: { en: "My attitude and explosive delivery", ko: "태도와 폭발적인 표현력" }, member: "minjae" }
         ]
       },
       {
-        question: "What kind of compliment do you like most?",
+        question: { en: "What kind of compliment do you like most?", ko: "어떤 칭찬이 가장 기분 좋나요?" },
         options: [
-          { text: "That I feel calm, kind, and easy to trust", member: "jinwoo" },
-          { text: "That I have amazing style and presence", member: "haejun" },
-          { text: "That I seem confident and unforgettable", member: "jayden" },
-          { text: "That I have unique energy no one else has", member: "seonho" }
+          { text: { en: "That I feel calm, kind, and easy to trust", ko: "차분하고 다정하며 믿음직하다는 말" }, member: "jinwoo" },
+          { text: { en: "That I have amazing style and presence", ko: "스타일과 분위기가 정말 좋다는 말" }, member: "haejun" },
+          { text: { en: "That I seem confident and unforgettable", ko: "자신감 있고 잊히지 않는 사람 같다는 말" }, member: "jayden" },
+          { text: { en: "That I have unique energy no one else has", ko: "다른 사람에게 없는 독특한 에너지가 있다는 말" }, member: "seonho" }
         ]
       },
       {
-        question: "Choose the phrase that feels the most 'you'.",
+        question: { en: "Choose the phrase that feels the most 'you'.", ko: "가장 '나답다'고 느껴지는 문장을 골라 보세요." },
         options: [
-          { text: "Steady heart, soft strength.", member: "jinwoo" },
-          { text: "Main character without trying.", member: "jayden" },
-          { text: "Sharp style, sharper instinct.", member: "haejun" },
-          { text: "Creative soul with graceful energy.", member: "seonho" }
+          { text: { en: "Steady heart, soft strength.", ko: "흔들리지 않는 마음, 부드러운 강함." }, member: "jinwoo" },
+          { text: { en: "Main character without trying.", ko: "애쓰지 않아도 주인공 같은 존재." }, member: "jayden" },
+          { text: { en: "Sharp style, sharper instinct.", ko: "날카로운 스타일, 더 날카로운 감각." }, member: "haejun" },
+          { text: { en: "Creative soul with graceful energy.", ko: "우아한 에너지를 가진 창의적인 영혼." }, member: "seonho" }
         ]
       }
     ];
@@ -1957,11 +2022,12 @@
       }
 
       function renderQuestion() {
+        const lang = window.currentLanguage || 'en';
         const item = quizQuestions[currentQuestion];
-        quizProgress.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
-        quizQuestionText.textContent = item.question;
+        quizProgress.textContent = lang === 'ko' ? `질문 ${currentQuestion + 1} / ${quizQuestions.length}` : `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+        quizQuestionText.textContent = item.question[lang] || item.question.en;
         quizOptions.innerHTML = item.options.map(option => (
-          `<button class="quiz-option" type="button" data-member="${option.member}">${option.text}</button>`
+          `<button class="quiz-option" type="button" data-member="${option.member}">${option.text[lang] || option.text.en}</button>`
         )).join('');
 
         quizOptions.querySelectorAll('.quiz-option').forEach(button => {
@@ -1978,6 +2044,7 @@
       }
 
       function showResult() {
+        const lang = window.currentLanguage || 'en';
         const scores = { haejun: 0, jinwoo: 0, jayden: 0, minjae: 0, seonho: 0 };
         answers.forEach(member => { scores[member] += 1; });
 
@@ -1985,10 +2052,10 @@
         const result = quizProfiles[topMember];
 
         quizResultImage.src = result.image;
-        quizResultImage.alt = result.name + " result image";
-        quizResultName.textContent = `You are... ${result.name}`;
-        quizResultBlurb.textContent = result.blurb;
-        quizResultBlurb2.textContent = result.blurb2;
+        quizResultImage.alt = (result.name[lang] || result.name.en) + " result image";
+        quizResultName.textContent = (lang === 'ko' ? '당신은... ' : 'You are... ') + (result.name[lang] || result.name.en);
+        quizResultBlurb.textContent = result.blurb[lang] || result.blurb.en;
+        quizResultBlurb2.textContent = result.blurb2[lang] || result.blurb2.en;
 
         quizQuestionView.style.display = 'none';
         quizStartView.style.display = 'none';
@@ -2030,11 +2097,142 @@
       quizRestartBtn.addEventListener('click', resetQuiz);
       quizRetakeBtn.addEventListener('click', resetQuiz);
     }
+  </script>
+
+
+
+  <script>
+    const translations = {
+      en: {
+        nav_about: "About",
+        nav_members: "Members",
+        nav_music: "Music",
+        nav_platforms: "Platforms",
+        hero_eyebrow: "Virtual Group",
+        hero_title: "Future in motion.",
+        hero_cta_members: "Members",
+        hero_cta_music: "Music",
+        release_date: "Release Date: 11th June 2026",
+        about_title: "About",
+        about_1_title: "About 1NFUZE",
+        about_2_title: "Sound & Identity",
+        about_3_title: "Current Era: CONTROL",
+        about_1_body: "1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.",
+        about_2_body: "Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.",
+        about_3_body: "CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.",
+        fan_eyebrow: "Fan Feature",
+        fan_title: "Which 1NFUZE member are you?",
+        fan_body: "Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.",
+        fan_button: "Start the Quiz",
+        members_title: "Members",
+        animal_haejun: "The Wolf",
+        animal_jinwoo: "The Falcon",
+        animal_jayden: "The Lion",
+        animal_minjae: "The Cobra",
+        animal_seonho: "The Bear",
+        sound_title: "The Sound of Control",
+        sound_body: "Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.",
+        player_now: "Now Playing",
+        platforms_title: "Listen to 1NFUZE",
+        platforms_body: "Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.",
+        platforms_kicker: "Official Platforms",
+        platforms_card_title: "Official listening platforms",
+        platforms_card_body: "Stream the current release through the official 1NFUZE destinations below.",
+        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
+        profile_kicker: "1NFUZE Member Profile",
+        quiz_kicker: "Fan Quiz",
+        quiz_title: "Which 1NFUZE member are you?",
+        quiz_subtitle: "Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.",
+        quiz_start: "Start Quiz",
+        quiz_back: "Back",
+        quiz_restart: "Restart",
+        quiz_result_kicker: "Quiz Result",
+        quiz_you_are: "You are...",
+        quiz_retake: "Take Quiz Again"
+      },
+      ko: {
+        nav_about: "소개",
+        nav_members: "멤버",
+        nav_music: "음악",
+        nav_platforms: "플랫폼",
+        hero_eyebrow: "버추얼 그룹",
+        hero_title: "움직이는 미래.",
+        hero_cta_members: "멤버",
+        hero_cta_music: "음악",
+        release_date: "발매일: 2026년 6월 11일",
+        about_title: "소개",
+        about_1_title: "1NFUZE 소개",
+        about_2_title: "사운드와 아이덴티티",
+        about_3_title: "현재 시대: CONTROL",
+        about_1_body: "1NFUZE는 강렬한 비주얼, 세련된 퍼포먼스, 미래적인 정체성을 중심으로 만들어진 버추얼 K-pop 그룹입니다. 인상적인 콘셉트 디자인과 현대적인 팝 에너지가 어우러져 음악, 스타일, 스토리텔링이 하나로 움직이는 세계를 보여줍니다.",
+        about_2_body: "세련되고 임팩트 있는 사운드와 드라마틱한 비주얼 미학을 바탕으로, 1NFUZE는 탄탄한 보컬, 역동적인 퍼포먼스, 그리고 각 멤버의 뚜렷한 존재감을 결합합니다. 그룹의 정체성은 자신감, 강렬함, 그리고 오래 남는 디지털 시대의 감각에 뿌리를 두고 있습니다.",
+        about_3_body: "CONTROL은 1NFUZE의 첫 번째 시대의 시작을 알리며, 힘과 존재감, 정밀함을 중심으로 한 콘셉트를 통해 그룹을 소개합니다. 날카로운 비주얼 스타일과 전율적인 분위기로, 데뷔 시대는 1NFUZE 세계의 방향성과 앞으로 펼쳐질 이야기를 확실히 보여줍니다.",
+        fan_eyebrow: "팬 콘텐츠",
+        fan_title: "당신은 어떤 1NFUZE 멤버일까요?",
+        fan_body: "1NFUZE 성향 퀴즈를 통해 당신의 에너지, 스타일, 분위기와 가장 잘 맞는 멤버를 확인해 보세요.",
+        fan_button: "퀴즈 시작",
+        members_title: "멤버",
+        animal_haejun: "늑대",
+        animal_jinwoo: "매",
+        animal_jayden: "사자",
+        animal_minjae: "코브라",
+        animal_seonho: "곰",
+        sound_title: "CONTROL의 사운드",
+        sound_body: "CONTROL 시대 속으로 들어가 1NFUZE 데뷔 세계의 전율을 느껴보세요.",
+        player_now: "재생 중",
+        platforms_title: "1NFUZE 듣기",
+        platforms_body: "공식 플랫폼을 통해 CONTROL 시대에 입장하고 모든 발매, 드롭, 컴백 순간을 함께하세요.",
+        platforms_kicker: "공식 플랫폼",
+        platforms_card_title: "공식 감상 플랫폼",
+        platforms_card_body: "아래의 공식 1NFUZE 플랫폼에서 현재 발매곡을 만나보세요.",
+        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
+        profile_kicker: "1NFUZE 멤버 프로필",
+        quiz_kicker: "팬 퀴즈",
+        quiz_title: "당신은 어떤 1NFUZE 멤버일까요?",
+        quiz_subtitle: "다섯 가지 질문에 답하고 당신의 에너지와 가장 잘 어울리는 1NFUZE 멤버를 확인해 보세요.",
+        quiz_start: "퀴즈 시작",
+        quiz_back: "뒤로",
+        quiz_restart: "다시 시작",
+        quiz_result_kicker: "퀴즈 결과",
+        quiz_you_are: "당신은...",
+        quiz_retake: "다시 해보기"
+      }
+    };
+
+    window.currentLanguage = localStorage.getItem('infuzeLanguage') || 'en';
+
+    function applyTranslations(lang) {
+      window.currentLanguage = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('infuzeLanguage', lang);
+      const set = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (set[key]) el.textContent = set[key];
+      });
+      const btn = document.getElementById('langToggleBtn');
+      if (btn) btn.textContent = lang === 'en' ? '한국어' : 'English';
+    }
+
+    function setupLanguageToggle() {
+      const btn = document.getElementById('langToggleBtn');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
+      });
+      applyTranslations(window.currentLanguage);
+    }
 
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', setupMemberQuiz);
+      document.addEventListener('DOMContentLoaded', () => {
+        setupLanguageToggle();
+        if (typeof setupProfilePopups === 'function') setupProfilePopups();
+        if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
+      });
     } else {
-      setupMemberQuiz();
+      setupLanguageToggle();
+      if (typeof setupProfilePopups === 'function') setupProfilePopups();
+      if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
     }
   </script>
 
