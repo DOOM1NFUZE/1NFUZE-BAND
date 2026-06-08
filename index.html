@@ -395,16 +395,29 @@
       margin-bottom: 8px;
       line-height: 1;
     }
-    .profile-modal-meta {
-      color: var(--muted);
-      margin-bottom: 18px;
-      font-size: 1rem;
+    .profile-modal-details {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
     }
-    .profile-modal-copy p {
+    .profile-modal-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .profile-modal-row:last-child {
+      border-bottom: 0;
+    }
+    .profile-modal-label {
+      color: #92f4ff;
+      font-weight: 700;
+    }
+    .profile-modal-value {
       color: #d9e4ff;
-      line-height: 1.75;
-      font-size: 1rem;
-      margin-bottom: 0;
+      line-height: 1.65;
     }
     @media (max-width: 760px) {
       .profile-modal-body {
@@ -412,6 +425,10 @@
       }
       .profile-modal-visual {
         min-height: 260px;
+      }
+      .profile-modal-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
       }
     }
 
@@ -593,8 +610,7 @@
         <div class="profile-modal-copy">
           <span class="profile-modal-kicker">1NFUZE Member Profile</span>
           <h3 id="profileModalName"></h3>
-          <div class="profile-modal-meta" id="profileModalRole"></div>
-          <p id="profileModalBio"></p>
+          <div class="profile-modal-details" id="profileModalDetails"></div>
         </div>
       </div>
     </div>
@@ -605,41 +621,70 @@
     const memberProfiles = {
       haejun: {
         name: "Haejun (해준)",
-        role: "Dancer",
-        image: "images/hj.png",
-        bio: "Haejun brings sharp control and fluid movement to the stage, anchoring 1NFUZE with performance energy that feels sleek, electric, and effortless. His style leans into precision, attitude, and polished stage presence, making him one of the strongest visual movers in the CONTROL era."
+        image: "images/hj.png.png",
+        details: {
+          "Birthday": "March 14, 2005",
+          "Birth Sign": "Pisces",
+          "Birth Place": "Suwon, Gyeonggi-do, South Korea",
+          "Favourite Movie": "Train to Busan",
+          "Favourite Bands": "TXT • The 1975",
+          "Quote": "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about."
+        }
       },
       jinwoo: {
         name: "Jinwoo (진우)",
-        role: "Backing Vocals",
         image: "images/jw.png",
-        bio: "Jinwoo adds warmth and balance to the group’s sound with a smooth vocal colour that supports the harder futuristic edge of 1NFUZE. Calm, stylish, and quietly charismatic, he brings a softer contrast that helps the group feel layered rather than one-note."
+        details: {
+          "Birthday": "August 22, 2004",
+          "Birth Sign": "Leo",
+          "Birth Place": "Busan, South Korea",
+          "Favourite Movie": "Your Name",
+          "Favourite Bands": "SEVENTEEN • Bruno Mars",
+          "Quote": "Your support gives me strength every day. Let’s make even more good memories together."
+        }
       },
       jayden: {
         name: "Jayden Lee (제이든 리)",
-        role: "Lead Vocals",
         image: "images/jl.png",
-        bio: "Jayden Lee stands at the centre of 1NFUZE with a confident presence and a vocal tone designed to carry the group’s identity. In the CONTROL era he represents the core of the concept: poised, magnetic, and unmistakably in command, with the kind of star focus that ties the whole lineup together."
+        details: {
+          "Birthday": "November 9, 2003",
+          "Birth Sign": "Scorpio",
+          "Birth Place": "Seoul, South Korea",
+          "Favourite Movie": "La La Land",
+          "Favourite Bands": "EXO • The Weeknd",
+          "Quote": "I always want to show you my best side. Please stay with us and let’s keep moving forward together."
+        }
       },
       minjae: {
         name: "Minjae (민재)",
-        role: "Rapper • Backing Vocals",
         image: "images/mj.png",
-        bio: "Minjae delivers edge, rhythm, and impact, bringing a sharp rap presence that cuts through the CONTROL sound with confidence. He adds a bolder texture to the group, mixing intensity with performance charisma and helping drive the more aggressive side of the era."
+        details: {
+          "Birthday": "January 27, 2004",
+          "Birth Sign": "Aquarius",
+          "Birth Place": "Incheon, South Korea",
+          "Favourite Movie": "Baby Driver",
+          "Favourite Bands": "Stray Kids • Post Malone",
+          "Quote": "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you."
+        }
       },
       seonho: {
         name: "Seonho (선호)",
-        role: "Dancer • Backing Vocals",
         image: "images/sh.png",
-        bio: "Seonho blends movement and vocal support into a cool, polished stage identity that fits 1NFUZE’s futuristic concept perfectly. His performance style feels stylish and composed, giving the lineup extra range while keeping the overall group image cohesive and premium."
+        details: {
+          "Birthday": "June 3, 2005",
+          "Birth Sign": "Gemini",
+          "Birth Place": "Daegu, South Korea",
+          "Favourite Movie": "Spider-Man: Into the Spider-Verse",
+          "Favourite Bands": "NCT DREAM • Keshi",
+          "Quote": "Thank you for looking after us so warmly. I hope our music can stay by your side every day."
+        }
       }
     };
 
     const profileModal = document.getElementById('profileModal');
     const profileModalClose = document.getElementById('profileModalClose');
     const profileModalName = document.getElementById('profileModalName');
-    const profileModalRole = document.getElementById('profileModalRole');
-    const profileModalBio = document.getElementById('profileModalBio');
+    const profileModalDetails = document.getElementById('profileModalDetails');
     const profileModalImage = document.getElementById('profileModalImage');
     const profileButtons = document.querySelectorAll('.profile-trigger');
 
@@ -647,8 +692,9 @@
       const profile = memberProfiles[memberKey];
       if (!profile) return;
       profileModalName.textContent = profile.name;
-      profileModalRole.textContent = profile.role;
-      profileModalBio.textContent = profile.bio;
+      profileModalDetails.innerHTML = Object.entries(profile.details).map(([label, value]) => {
+        return `<div class="profile-modal-row"><div class="profile-modal-label">${label}:</div><div class="profile-modal-value">${value}</div></div>`;
+      }).join('');
       profileModalImage.src = profile.image;
       profileModalImage.alt = profile.name + " profile image";
       profileModal.classList.add('active');
