@@ -2011,6 +2011,19 @@ const translations = {
         applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
       });
       applyTranslations(window.currentLanguage);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        setupLanguageToggle();
+        if (typeof setupProfilePopups === 'function') setupProfilePopups();
+        if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
+      });
+    } else {
+      setupLanguageToggle();
+      if (typeof setupProfilePopups === 'function') setupProfilePopups();
+      if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
+    }
   </script>
 </body>
 </html>
