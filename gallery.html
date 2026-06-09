@@ -1430,6 +1430,101 @@
 
 
   
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .gallery-card {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+    .gallery-thumb {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 20% 18%, rgba(121, 71, 255, 0.24), transparent 24%),
+        radial-gradient(circle at 80% 18%, rgba(79, 164, 255, 0.18), transparent 24%),
+        linear-gradient(180deg, rgba(7, 9, 30, 0.96), rgba(6, 7, 19, 0.98));
+      cursor: pointer;
+    }
+    .gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-copy { padding: 16px 18px 18px; }
+    .gallery-tag {
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      color: #92f4ff;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 12px;
+    }
+    .gallery-copy h3 { margin: 0 0 8px; font-size: 1.12rem; }
+    .gallery-copy p { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.95rem; }
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(2, 4, 12, 0.84);
+      backdrop-filter: blur(14px);
+      z-index: 260;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox-card {
+      width: min(100%, 1080px);
+      max-height: calc(100vh - 40px);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(180deg, rgba(10, 12, 34, 0.98), rgba(7, 8, 22, 1));
+      box-shadow: 0 24px 90px rgba(0, 0, 0, 0.55);
+      position: relative;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: #eef3ff;
+      font-size: 1.4rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .lightbox-visual { max-height: calc(100vh - 170px); background: rgba(255,255,255,0.03); }
+    .lightbox-visual img {
+      width: 100%;
+      max-height: calc(100vh - 170px);
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    .lightbox-copy { padding: 18px 22px 22px; }
+    .lightbox-copy h3 { margin: 0 0 8px; font-size: 1.3rem; }
+    .lightbox-copy p { margin: 0; color: var(--muted); line-height: 1.7; }
+    
+
   </style>
 </head>
 <body>
@@ -1453,22 +1548,17 @@
     </div>
   </header>
 
+  
   <main>
-
-    
     <section class="hero" id="gallery-home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Concept Gallery</div>
-          <h1><span class="gradient-text">1NFUZE</span><br />CONTROL visual archive.</h1>
-          <p>
+          <div class="eyebrow" data-i18n="gallery_eyebrow">Concept Gallery</div>
+          <h1><span class="gradient-text">1NFUZE</span><br /><span data-i18n="gallery_title">CONTROL Visual Archive</span></h1>
+          <p data-i18n="gallery_body">
             Explore a curated space for 1NFUZE concept visuals, unit images, symbolic details,
             alternate group scenes, and era-defining artwork from the world of CONTROL.
           </p>
-          <div class="hero-actions">
-            <a class="cta cta-primary" href="downloads.html">Downloads</a>
-            <a class="cta cta-secondary" href="members.html">Members</a>
-          </div>
         </div>
 
         <aside class="hero-card">
@@ -1480,27 +1570,79 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="gallery">
       <div class="container">
-        <div class="panel-grid">
-          <div class="panel-card">
-            <h3>Unit Concepts</h3>
-            <p>Discover duo and trio visuals that expand the chemistry and identity of the 1NFUZE members.</p>
-          </div>
-          <div class="panel-card">
-            <h3>Symbolic Details</h3>
-            <p>Explore close-up visuals built around props, totems, styling details, and the iconography of CONTROL.</p>
-          </div>
-          <div class="panel-card">
-            <h3>Era Worldbuilding</h3>
-            <p>Step deeper into the atmosphere of CONTROL through alternate scenes, visual storytelling, and concept imagery.</p>
-          </div>
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="Haejun + Jinwoo" data-lightbox-desc="A sharp dual-concept visual pairing Haejun’s wolf energy with Jinwoo’s brighter, grounded presence.">
+              <img src="downloads/ca-1.png" alt="Haejun and Jinwoo concept image">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_1_tag">Unit Shot</span>
+              <h3 data-i18n="gallery_card_1_title">Haejun + Jinwoo</h3>
+              <p data-i18n="gallery_card_1_body">A sharp dual-concept visual pairing Haejun’s wolf energy with Jinwoo’s brighter, grounded presence.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="Jayden + Minjae + Seonho" data-lightbox-desc="A focused trio visual with Jayden at the centre, framed by Minjae and Seonho in a unified CONTROL concept.">
+              <img src="downloads/ca-2.png" alt="Jayden Lee, Minjae and Seonho concept image">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_2_tag">Unit Shot</span>
+              <h3 data-i18n="gallery_card_2_title">Jayden + Minjae + Seonho</h3>
+              <p data-i18n="gallery_card_2_body">A focused trio visual with Jayden at the centre, framed by Minjae and Seonho in a unified CONTROL concept.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="Totem Chamber" data-lightbox-desc="A close-up worldbuilding shot featuring the lion, cobra, and bear totems within a glowing CONTROL chamber.">
+              <img src="downloads/ca-3.png" alt="Totem chamber concept image">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_3_tag">Symbol Detail</span>
+              <h3 data-i18n="gallery_card_3_title">Totem Chamber</h3>
+              <p data-i18n="gallery_card_3_body">A close-up worldbuilding shot featuring the lion, cobra, and bear totems within a glowing CONTROL chamber.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="Command Lounge" data-lightbox-desc="An alternate full-group concept scene inside a futuristic lounge overlooking the world of CONTROL.">
+              <img src="downloads/ca-4.png" alt="Full group command lounge concept image">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_4_tag">Special Group</span>
+              <h3 data-i18n="gallery_card_4_title">Command Lounge</h3>
+              <p data-i18n="gallery_card_4_body">An alternate full-group concept scene inside a futuristic lounge overlooking the world of CONTROL.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="CONTROL Chamber" data-lightbox-desc="A cinematic empty environment shot showing the core chamber, holographic insignia, and system architecture.">
+              <img src="downloads/ca-5.png" alt="Control chamber worldbuilding image">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_5_tag">Worldbuilding</span>
+              <h3 data-i18n="gallery_card_5_title">CONTROL Chamber</h3>
+              <p data-i18n="gallery_card_5_body">A cinematic empty environment shot showing the core chamber, holographic insignia, and system architecture.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-thumb" data-lightbox-title="System Lock" data-lightbox-desc="An abstract era graphic built around energy rings, shards, interface framing, and the CONTROL identity.">
+              <img src="downloads/ca-6.png" alt="System lock abstract control graphic">
+            </div>
+            <div class="gallery-copy">
+              <span class="gallery-tag" data-i18n="gallery_card_6_tag">Teaser Frame</span>
+              <h3 data-i18n="gallery_card_6_title">System Lock</h3>
+              <p data-i18n="gallery_card_6_body">An abstract era graphic built around energy rings, shards, interface framing, and the CONTROL identity.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
-
-
   </main>
+
 <footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p style="margin:0; width:100%; text-align:center;" data-i18n="footer_copy">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
 
 
@@ -1731,5 +1873,61 @@
     if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
   }
 </script>
+
+  <div class="lightbox" id="galleryLightbox" aria-hidden="true">
+    <div class="lightbox-card" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close image">×</button>
+      <div class="lightbox-visual" id="lightboxVisual"></div>
+      <div class="lightbox-copy">
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    (function () {
+      const lightbox = document.getElementById('galleryLightbox');
+      const closeBtn = document.getElementById('lightboxClose');
+      const visual = document.getElementById('lightboxVisual');
+      const title = document.getElementById('lightboxTitle');
+      const desc = document.getElementById('lightboxDesc');
+      const thumbs = document.querySelectorAll('.gallery-thumb');
+      if (!lightbox || !closeBtn || !visual || !title || !desc || !thumbs.length) return;
+
+      function openLightbox(card) {
+        visual.innerHTML = '';
+        const img = card.querySelector('img');
+        if (img && img.getAttribute('src')) {
+          const clone = document.createElement('img');
+          clone.src = img.getAttribute('src');
+          clone.alt = img.getAttribute('alt') || '';
+          visual.appendChild(clone);
+        }
+        title.textContent = card.dataset.lightboxTitle || '';
+        desc.textContent = card.dataset.lightboxDesc || '';
+        lightbox.classList.add('active');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      thumbs.forEach(card => card.addEventListener('click', () => openLightbox(card)));
+      closeBtn.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+      });
+    })();
+  </script>
+
 </body>
 </html>
