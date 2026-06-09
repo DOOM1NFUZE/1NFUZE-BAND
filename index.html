@@ -1327,6 +1327,107 @@
     }
 
 
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .countdown-card,
+    .notices-card {
+      min-height: 220px;
+      padding: 28px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+    .countdown-label {
+      color: #92f4ff;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .countdown-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      margin: 0 0 10px;
+      line-height: 1;
+    }
+    .countdown-copy {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 22px;
+      max-width: 58ch;
+    }
+    .countdown-timer {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .countdown-unit {
+      padding: 18px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+      text-align: center;
+    }
+    .countdown-value {
+      display: block;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .countdown-small {
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .notice-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .notice-item {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+    }
+    .notice-date {
+      display: block;
+      color: #92f4ff;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .notice-text {
+      color: #d9e4ff;
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+    @media (max-width: 900px) {
+      .countdown-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .countdown-timer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -1340,6 +1441,7 @@
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#members" data-i18n="nav_members">Members</a>
         <a href="#music" data-i18n="nav_music">Music</a>
+        <a href="#countdown" data-i18n="nav_countdown">Countdown</a>
         <a href="#downloads" data-i18n="nav_wallpapers">Wallpapers</a>
         <a href="#posters" data-i18n="nav_posters">Posters</a>
         <a href="#media" data-i18n="nav_platforms">Platforms</a>
@@ -1526,6 +1628,56 @@
 
           <article class="panel-card sound-panel sound-art">
             <img src="images/control-art-right.png" alt="CONTROL era artwork right panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='images/control-artwork-right.png';}else{this.style.display='none';}">
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="countdown">
+      <div class="container">
+        <div class="countdown-grid">
+          <article class="countdown-card">
+            <span class="countdown-label" data-i18n="countdown_eyebrow">Countdown</span>
+            <h2 class="countdown-title" data-i18n="countdown_title">Debut Countdown</h2>
+            <p class="countdown-copy" data-i18n="countdown_body">The CONTROL era is almost here. Count down to the 1NFUZE debut release and stay locked in for the latest official updates.</p>
+            <div class="countdown-timer" id="debutCountdown">
+              <div class="countdown-unit">
+                <span class="countdown-value" id="countdownDays">00</span>
+                <span class="countdown-small" data-i18n="countdown_days">Days</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" id="countdownHours">00</span>
+                <span class="countdown-small" data-i18n="countdown_hours">Hours</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" id="countdownMinutes">00</span>
+                <span class="countdown-small" data-i18n="countdown_minutes">Minutes</span>
+              </div>
+              <div class="countdown-unit">
+                <span class="countdown-value" id="countdownSeconds">00</span>
+                <span class="countdown-small" data-i18n="countdown_seconds">Seconds</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="notices-card">
+            <span class="countdown-label" data-i18n="notices_label">Official Notices</span>
+            <div class="notice-list">
+              <div class="notice-item">
+                <span class="notice-date" data-i18n="notice_1_date">Update</span>
+                <div class="notice-text" data-i18n="notice_1_text">CONTROL member wallpapers are now available in the downloads section.</div>
+              </div>
+              <div class="notice-item">
+                <span class="notice-date" data-i18n="notice_2_date">Poster Drop</span>
+                <div class="notice-text" data-i18n="notice_2_text">Individual member posters and both group posters have been added.</div>
+              </div>
+              <div class="notice-item">
+                <span class="notice-date" data-i18n="notice_3_date">Pre-save</span>
+                <div class="notice-text" data-i18n="notice_3_text">Official platform buttons are live for the CONTROL debut release.</div>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -2418,6 +2570,7 @@
         nav_about: "About",
         nav_members: "Members",
         nav_music: "Music",
+        nav_countdown: "Countdown",
         nav_wallpapers: "Wallpapers",
         nav_posters: "Posters",
         nav_platforms: "Platforms",
@@ -2434,6 +2587,20 @@
         posters_title: "CONTROL Posters",
         posters_body: "Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.",
         poster_download: "Download Poster",
+        countdown_eyebrow: "Countdown",
+        countdown_title: "Debut Countdown",
+        countdown_body: "The CONTROL era is almost here. Count down to the 1NFUZE debut release and stay locked in for the latest official updates.",
+        countdown_days: "Days",
+        countdown_hours: "Hours",
+        countdown_minutes: "Minutes",
+        countdown_seconds: "Seconds",
+        notices_label: "Official Notices",
+        notice_1_date: "Update",
+        notice_1_text: "CONTROL member wallpapers are now available in the downloads section.",
+        notice_2_date: "Poster Drop",
+        notice_2_text: "Individual member posters and both group posters have been added.",
+        notice_3_date: "Pre-save",
+        notice_3_text: "Official platform buttons are live for the CONTROL debut release.",
         release_date: "Release Date: 11th June 2026",
         about_title: "About",
         about_1_title: "About 1NFUZE",
@@ -2476,6 +2643,7 @@
         nav_about: "소개",
         nav_members: "멤버",
         nav_music: "음악",
+        nav_countdown: "카운트다운",
         nav_wallpapers: "월페이퍼",
         nav_posters: "포스터",
         nav_platforms: "플랫폼",
@@ -2492,6 +2660,20 @@
         posters_title: "CONTROL 포스터",
         posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요. GitHub Pages에서는 이 파일들을 downloads/ 폴더에 넣으면 버튼이 정상 작동합니다.",
         poster_download: "포스터 다운로드",
+        countdown_eyebrow: "카운트다운",
+        countdown_title: "데뷔 카운트다운",
+        countdown_body: "CONTROL 시대가 곧 시작됩니다. 1NFUZE 데뷔 발매까지 남은 시간을 확인하고 최신 공식 업데이트를 놓치지 마세요.",
+        countdown_days: "일",
+        countdown_hours: "시간",
+        countdown_minutes: "분",
+        countdown_seconds: "초",
+        notices_label: "공식 공지",
+        notice_1_date: "업데이트",
+        notice_1_text: "CONTROL 멤버 월페이퍼가 다운로드 섹션에 추가되었습니다.",
+        notice_2_date: "포스터 공개",
+        notice_2_text: "개인 멤버 포스터와 두 장의 그룹 포스터가 추가되었습니다.",
+        notice_3_date: "프리세이브",
+        notice_3_text: "CONTROL 데뷔 발매를 위한 공식 플랫폼 버튼이 활성화되었습니다.",
         release_date: "발매일: 2026년 6월 11일",
         about_title: "소개",
         about_1_title: "1NFUZE 소개",
@@ -2567,6 +2749,43 @@
       if (typeof setupProfilePopups === 'function') setupProfilePopups();
       if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
     }
+  </script>
+
+  <script>
+    (function () {
+      const targetDate = new Date('2026-06-11T00:00:00');
+      const daysEl = document.getElementById('countdownDays');
+      const hoursEl = document.getElementById('countdownHours');
+      const minutesEl = document.getElementById('countdownMinutes');
+      const secondsEl = document.getElementById('countdownSeconds');
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
   </script>
 
 </body>
