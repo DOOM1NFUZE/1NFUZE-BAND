@@ -20,26 +20,26 @@
     * { box-sizing: border-box; }
     html {
       scroll-behavior: smooth;
-      background: #03040a url("images/sb-1.png") center center / cover no-repeat fixed;
+      background: #03040a url("../images/sb-1.png") center center / cover no-repeat fixed;
     }
     body {
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       background:
         linear-gradient(rgba(3, 4, 10, 0.68), rgba(3, 4, 10, 0.78)),
-        url("images/sb-1.png") center center / cover no-repeat fixed;
+        url("../images/sb-1.png") center center / cover no-repeat fixed;
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
     }
     @media (max-width: 760px) {
       html {
-        background: #03040a url("images/sb-1.png") center center / cover no-repeat;
+        background: #03040a url("../images/sb-1.png") center center / cover no-repeat;
       }
       body {
         background:
           linear-gradient(rgba(3, 4, 10, 0.72), rgba(3, 4, 10, 0.82)),
-          url("images/sb-1.png") center center / cover no-repeat;
+          url("../images/sb-1.png") center center / cover no-repeat;
       }
     }
     a { color: inherit; text-decoration: none; }
@@ -1448,18 +1448,18 @@
 <header class="topbar">
 <div class="container topbar-inner">
 <a aria-label="1NFUZE home" class="brand" href="index.html">
-<img alt="1NFUZE logo" src="images/logot.png"/>
+<img alt="1NFUZE logo" src="../images/logot.png"/>
 <span>1NFUZE</span>
 </a>
 <nav aria-label="Primary navigation" class="nav">
-<a data-i18n="nav_about" href="index.html#about">ìê°</a>
-<a data-i18n="nav_members" href="members.html">ë©¤ë²</a>
-<a data-i18n="nav_music" href="music.html">ìì</a>
-<a data-i18n="nav_countdown" href="index.html#countdown">ì¹´ì´í¸ë¤ì´</a>
-<a data-i18n="nav_gallery" href="gallery.html">ê°¤ë¬ë¦¬</a>
-<a data-i18n="nav_wallpapers" href="downloads.html">ìíì´í¼</a>
-<a data-i18n="nav_posters" href="downloads.html#posters">í¬ì¤í°</a>
-<a data-i18n="nav_platforms" href="music.html#media">íë«í¼</a>
+<a data-i18n="nav_about" href="index.html#about">소개</a>
+<a data-i18n="nav_members" href="members.html">멤버</a>
+<a data-i18n="nav_music" href="music.html">음악</a>
+<a data-i18n="nav_countdown" href="index.html#countdown">카운트다운</a>
+<a data-i18n="nav_gallery" href="gallery.html">갤러리</a>
+<a data-i18n="nav_wallpapers" href="downloads.html">월페이퍼</a>
+<a data-i18n="nav_posters" href="downloads.html#posters">포스터</a>
+<a data-i18n="nav_platforms" href="music.html#media">플랫폼</a>
 <a aria-label="Switch language" class="lang-toggle" href="../music.html">English</a>
 </nav>
 </div>
@@ -1468,20 +1468,20 @@
 <section class="section" id="music">
 <div class="container">
 <div class="section-head">
-<h2 data-i18n="sound_title">CONTROLì ì¬ì´ë</h2>
-<p data-i18n="sound_body">CONTROL ìë ìì¼ë¡ ë¤ì´ê° 1NFUZE ë°ë· ì¸ê³ì ì ì¨ì ëê»´ë³´ì¸ì.</p>
+<h2 data-i18n="sound_title">CONTROL의 사운드</h2>
+<p data-i18n="sound_body">CONTROL 시대 속으로 들어가 1NFUZE 데뷔 세계의 전율을 느껴보세요.</p>
 </div>
 <div class="sound-grid">
 <article class="panel-card sound-panel sound-art">
-<img alt="CONTROL era artwork left panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='images/control-art-left.png';}else{this.style.display='none';}" src="images/control-artwork-left.png"/>
+<img alt="CONTROL era artwork left panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='../images/control-art-left.png';}else{this.style.display='none';}" src="../images/control-artwork-left.png"/>
 </article>
 <article class="panel-card sound-panel sound-player" id="soundPlayer">
 <div class="player-top">
 <div class="player-cover">
-<img alt="1NFUZE track artwork" id="trackCover" onerror="this.style.display='none'" src="images/logo.png"/>
+<img alt="1NFUZE track artwork" id="trackCover" onerror="this.style.display='none'" src="../images/logo.png"/>
 </div>
 <div class="player-info">
-<span class="player-now" data-i18n="player_now">ì¬ì ì¤</span>
+<span class="player-now" data-i18n="player_now">재생 중</span>
 <h3 class="player-title" id="trackTitle">달이다 (Infuze)</h3>
 </div>
 </div>
@@ -1510,7 +1510,7 @@
 <audio id="audioPlayer" preload="metadata"></audio>
 </article>
 <article class="panel-card sound-panel sound-art">
-<img alt="CONTROL era artwork right panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='images/control-artwork-right.png';}else{this.style.display='none';}" src="images/control-art-right.png"/>
+<img alt="CONTROL era artwork right panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='../images/control-artwork-right.png';}else{this.style.display='none';}" src="../images/control-art-right.png"/>
 </article>
 </div>
 </div>
@@ -1518,28 +1518,28 @@
 <section class="section" id="media">
 <div class="container">
 <div class="section-head">
-<h2 data-i18n="platforms_title">1NFUZE ë£ê¸°</h2>
-<p data-i18n="platforms_body">ê³µì íë«í¼ì íµí´ CONTROL ìëì ìì¥íê³  ëª¨ë  ë°ë§¤, ëë¡­, ì»´ë°± ìê°ì í¨ê»íì¸ì.</p>
+<h2 data-i18n="platforms_title">1NFUZE 듣기</h2>
+<p data-i18n="platforms_body">공식 플랫폼을 통해 CONTROL 시대에 입장하고 모든 발매, 드롭, 컴백 순간을 함께하세요.</p>
 </div>
 <div class="stream-section-card panel-card">
 <div class="stream-section-copy">
-<span class="sound-kicker" data-i18n="platforms_kicker">ê³µì íë«í¼</span>
-<h3 data-i18n="platforms_card_title">ê³µì ê°ì íë«í¼</h3>
-<p data-i18n="platforms_card_body">ìëì ê³µì 1NFUZE íë«í¼ìì íì¬ ë°ë§¤ê³¡ì ë§ëë³´ì¸ì.</p>
+<span class="sound-kicker" data-i18n="platforms_kicker">공식 플랫폼</span>
+<h3 data-i18n="platforms_card_title">공식 감상 플랫폼</h3>
+<p data-i18n="platforms_card_body">아래의 공식 1NFUZE 플랫폼에서 현재 발매곡을 만나보세요.</p>
 </div>
 <div class="stream-links stream-links-section" id="streamLinks"></div>
 </div>
 </div>
 </section>
 </main>
-<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p data-i18n="footer_copy" style="margin:0; width:100%; text-align:center;">Â©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
+<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p data-i18n="footer_copy" style="margin:0; width:100%; text-align:center;">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
 <script>
 
     const controlPlaylist = [
       {
         title: "달이다 (Infuze)",
-        audio: "audio/track1.mp3",
-        cover: "images/logo.png",
+        audio: "../audio/track1.mp3",
+        cover: "../images/logo.png",
         links: [
           { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
           { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
@@ -1550,8 +1550,8 @@
       },
       {
         title: "제어 (Control)",
-        audio: "audio/track2.mp3",
-        cover: "images/logo.png",
+        audio: "../audio/track2.mp3",
+        cover: "../images/logo.png",
         links: [
           { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
           { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
@@ -1562,8 +1562,8 @@
       },
       {
         title: "해내 (바로잡아) Do It (Make it Right)",
-        audio: "audio/track3.mp3",
-        cover: "images/logo.png",
+        audio: "../audio/track3.mp3",
+        cover: "../images/logo.png",
         links: [
           { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
           { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
@@ -1589,11 +1589,11 @@
     const visualizerBars = Array.from(document.querySelectorAll('#visualizerBars span'));
 
     const platformIcons = {
-      "spotify": "images/spotify.png",
-      "youtube music": "images/youtube-music.png",
-      "apple music": "images/apple-music.png",
-      "audiomack": "images/audiomack.png",
-      "deezer": "images/deezer.png"
+      "spotify": "../images/spotify.png",
+      "youtube music": "../images/youtube-music.png",
+      "apple music": "../images/apple-music.png",
+      "audiomack": "../images/audiomack.png",
+      "deezer": "../images/deezer.png"
     };
 
     let currentTrackIndex = 0;
