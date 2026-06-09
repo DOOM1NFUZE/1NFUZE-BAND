@@ -1258,6 +1258,75 @@
       box-shadow: 0 12px 28px rgba(146, 244, 255, 0.18);
     }
 
+    .posters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 28px;
+    }
+    .poster-card {
+      padding: 18px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
+        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+    .poster-preview {
+      aspect-ratio: 3 / 4;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      margin-bottom: 16px;
+    }
+    .poster-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .poster-card h3 {
+      margin: 0 0 8px;
+      text-align: center;
+      font-size: 1.22rem;
+    }
+    .poster-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      min-height: 48px;
+    }
+    .poster-links {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .poster-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.22s ease;
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #05101a;
+      background: linear-gradient(90deg, var(--cyan), #f2d8ff 88%);
+      text-align: center;
+      box-shadow: 0 12px 28px rgba(146, 244, 255, 0.18);
+    }
+    .poster-btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(146, 244, 255, 0.34);
+    }
+
+
   </style>
 </head>
 <body>
@@ -1272,6 +1341,7 @@
         <a href="#members" data-i18n="nav_members">Members</a>
         <a href="#music" data-i18n="nav_music">Music</a>
         <a href="#downloads" data-i18n="nav_wallpapers">Wallpapers</a>
+        <a href="#posters" data-i18n="nav_posters">Posters</a>
         <a href="#media" data-i18n="nav_platforms">Platforms</a>
         <button class="lang-toggle" type="button" id="langToggleBtn" aria-label="Switch language">한국어</button>
       </nav>
@@ -1528,6 +1598,97 @@
             <div class="download-links">
               <a class="download-btn primary" href="downloads/sh-wp-dt.png" download data-i18n="download_desktop">Desktop</a>
               <a class="download-btn" href="downloads/sh-wp-mp.png" download data-i18n="download_mobile">Mobile</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="posters">
+      <div class="container">
+        <span class="eyebrow" data-i18n="posters_eyebrow">Posters</span>
+        <h2 data-i18n="posters_title">CONTROL Posters</h2>
+        <p class="section-copy" style="max-width: 760px; color: var(--muted);">
+          <span data-i18n="posters_body">Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.</span>
+        </p>
+
+        <div class="posters-grid">
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/hj-pt.png" alt="Haejun poster preview">
+            </div>
+            <h3>Haejun</h3>
+            <p data-i18n="animal_haejun">The Wolf</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/hj-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/jw-pt.png" alt="Jinwoo poster preview">
+            </div>
+            <h3>Jinwoo</h3>
+            <p data-i18n="animal_jinwoo">The Falcon</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/jw-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/jl-pt.png" alt="Jayden Lee poster preview">
+            </div>
+            <h3>Jayden Lee</h3>
+            <p data-i18n="animal_jayden">The Lion</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/jl-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/mj-pt.png" alt="Minjae poster preview">
+            </div>
+            <h3>Minjae</h3>
+            <p data-i18n="animal_minjae">The Cobra</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/mj-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/sh-pt.png" alt="Seonho poster preview">
+            </div>
+            <h3>Seonho</h3>
+            <p data-i18n="animal_seonho">The Bear</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/sh-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/gp-pt.png" alt="Group poster preview">
+            </div>
+            <h3>1NFUZE</h3>
+            <p>CONTROL Group Poster</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/gp-pt.png" download data-i18n="poster_download">Download Poster</a>
+            </div>
+          </article>
+
+          <article class="poster-card">
+            <div class="poster-preview">
+              <img src="downloads/gp2-pt.png" alt="Group lounge poster preview">
+            </div>
+            <h3>1NFUZE</h3>
+            <p>CONTROL Lounge Poster</p>
+            <div class="poster-links">
+              <a class="poster-btn" href="downloads/gp2-pt.png" download data-i18n="poster_download">Download Poster</a>
             </div>
           </article>
         </div>
@@ -2258,6 +2419,7 @@
         nav_members: "Members",
         nav_music: "Music",
         nav_wallpapers: "Wallpapers",
+        nav_posters: "Posters",
         nav_platforms: "Platforms",
         hero_eyebrow: "Virtual Group",
         hero_title: "Future in motion.",
@@ -2268,6 +2430,10 @@
         downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.",
         download_desktop: "Desktop",
         download_mobile: "Mobile",
+        posters_eyebrow: "Posters",
+        posters_title: "CONTROL Posters",
+        posters_body: "Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.",
+        poster_download: "Download Poster",
         release_date: "Release Date: 11th June 2026",
         about_title: "About",
         about_1_title: "About 1NFUZE",
@@ -2311,6 +2477,7 @@
         nav_members: "멤버",
         nav_music: "음악",
         nav_wallpapers: "월페이퍼",
+        nav_posters: "포스터",
         nav_platforms: "플랫폼",
         hero_eyebrow: "버추얼 그룹",
         hero_title: "움직이는 미래.",
@@ -2321,6 +2488,10 @@
         downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요. GitHub Pages에서는 이미지 파일을 downloads/ 같은 정적 폴더에 넣으면 이 버튼들이 바로 연결됩니다.",
         download_desktop: "데스크톱",
         download_mobile: "모바일",
+        posters_eyebrow: "포스터",
+        posters_title: "CONTROL 포스터",
+        posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요. GitHub Pages에서는 이 파일들을 downloads/ 폴더에 넣으면 버튼이 정상 작동합니다.",
+        poster_download: "포스터 다운로드",
         release_date: "발매일: 2026년 6월 11일",
         about_title: "소개",
         about_1_title: "1NFUZE 소개",
