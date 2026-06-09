@@ -1975,7 +1975,7 @@
   </script>
 
   <script>
-const translations = {
+  const translations = {
       en: {
         nav_about: "About",
         nav_members: "Members",
@@ -2139,26 +2139,28 @@ const translations = {
       if (btn) btn.textContent = lang === 'en' ? '한국어' : 'English';
     }
 
-    function setupLanguageToggle() {
-      const btn = document.getElementById('langToggleBtn');
-      if (!btn) return;
-      btn.addEventListener('click', () => {
-        applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
-      });
-      applyTranslations(window.currentLanguage);
-    }
+  function setupLanguageToggle() {
+    const btn = document.getElementById('langToggleBtn');
+    if (!btn) return;
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        setupLanguageToggle();
-        if (typeof setupProfilePopups === 'function') setupProfilePopups();
-        if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
-      });
-    } else {
+    btn.onclick = () => {
+      applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
+    };
+
+    applyTranslations(window.currentLanguage);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
       setupLanguageToggle();
       if (typeof setupProfilePopups === 'function') setupProfilePopups();
       if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
-    }
-  </script>
+    });
+  } else {
+    setupLanguageToggle();
+    if (typeof setupProfilePopups === 'function') setupProfilePopups();
+    if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
+  }
+</script>
 </body>
 </html>
