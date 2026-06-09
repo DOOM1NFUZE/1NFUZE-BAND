@@ -1839,5 +1839,178 @@
   
   </script>
 
+  <script>
+const translations = {
+      en: {
+        nav_about: "About",
+        nav_members: "Members",
+        nav_music: "Music",
+        nav_countdown: "Countdown",
+        nav_wallpapers: "Wallpapers",
+        nav_posters: "Posters",
+        nav_platforms: "Platforms",
+        hero_eyebrow: "Virtual Group",
+        hero_title: "Future in motion.",
+        hero_cta_members: "Members",
+        hero_cta_music: "Music",
+        downloads_eyebrow: "Wallpapers",
+        downloads_title: "CONTROL Wallpapers",
+        downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.",
+        download_desktop: "Desktop",
+        download_mobile: "Mobile",
+        posters_eyebrow: "Posters",
+        posters_title: "CONTROL Posters",
+        posters_body: "Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.",
+        poster_download: "Download Poster",
+        countdown_eyebrow: "Countdown",
+        countdown_title: "Debut Countdown",
+        countdown_body: "The CONTROL era is almost here. Count down to the 1NFUZE debut release and stay locked in for the latest official updates.",
+        countdown_days: "Days",
+        countdown_hours: "Hours",
+        countdown_minutes: "Minutes",
+        countdown_seconds: "Seconds",
+        notices_label: "Official Notices",
+        notice_1_date: "Update",
+        notice_1_text: "CONTROL member wallpapers are now available in the downloads section.",
+        notice_2_date: "Poster Drop",
+        notice_2_text: "Individual member posters and both group posters have been added.",
+        notice_3_date: "Pre-save",
+        notice_3_text: "Official platform buttons are live for the CONTROL debut release.",
+        release_date: "Release Date: 11th June 2026",
+        about_title: "About",
+        about_1_title: "About 1NFUZE",
+        about_2_title: "Sound & Identity",
+        about_3_title: "Current Era: CONTROL",
+        about_1_body: "1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.",
+        about_2_body: "Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.",
+        about_3_body: "CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.",
+        fan_eyebrow: "Fan Feature",
+        fan_title: "Which 1NFUZE member are you?",
+        fan_body: "Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.",
+        fan_button: "Start the Quiz",
+        members_title: "Members",
+        animal_haejun: "The Wolf",
+        animal_jinwoo: "The Falcon",
+        animal_jayden: "The Lion",
+        animal_minjae: "The Cobra",
+        animal_seonho: "The Bear",
+        sound_title: "The Sound of Control",
+        sound_body: "Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.",
+        player_now: "Now Playing",
+        platforms_title: "Listen to 1NFUZE",
+        platforms_body: "Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.",
+        platforms_kicker: "Official Platforms",
+        platforms_card_title: "Official listening platforms",
+        platforms_card_body: "Stream the current release through the official 1NFUZE destinations below.",
+        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
+        profile_kicker: "1NFUZE Member Profile",
+        quiz_kicker: "Fan Quiz",
+        quiz_title: "Which 1NFUZE member are you?",
+        quiz_subtitle: "Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.",
+        quiz_start: "Start Quiz",
+        quiz_back: "Back",
+        quiz_restart: "Restart",
+        quiz_result_kicker: "Quiz Result",
+        quiz_you_are: "You are...",
+        quiz_retake: "Take Quiz Again"
+      },
+      ko: {
+        nav_about: "소개",
+        nav_members: "멤버",
+        nav_music: "음악",
+        nav_countdown: "카운트다운",
+        nav_wallpapers: "월페이퍼",
+        nav_posters: "포스터",
+        nav_platforms: "플랫폼",
+        hero_eyebrow: "버추얼 그룹",
+        hero_title: "움직이는 미래.",
+        hero_cta_members: "멤버",
+        hero_cta_music: "음악",
+        downloads_eyebrow: "월페이퍼",
+        downloads_title: "CONTROL 월페이퍼",
+        downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요. GitHub Pages에서는 이미지 파일을 downloads/ 같은 정적 폴더에 넣으면 이 버튼들이 바로 연결됩니다.",
+        download_desktop: "데스크톱",
+        download_mobile: "모바일",
+        posters_eyebrow: "포스터",
+        posters_title: "CONTROL 포스터",
+        posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요. GitHub Pages에서는 이 파일들을 downloads/ 폴더에 넣으면 버튼이 정상 작동합니다.",
+        poster_download: "포스터 다운로드",
+        countdown_eyebrow: "카운트다운",
+        countdown_title: "데뷔 카운트다운",
+        countdown_body: "CONTROL 시대가 곧 시작됩니다. 1NFUZE 데뷔 발매까지 남은 시간을 확인하고 최신 공식 업데이트를 놓치지 마세요.",
+        countdown_days: "일",
+        countdown_hours: "시간",
+        countdown_minutes: "분",
+        countdown_seconds: "초",
+        notices_label: "공식 공지",
+        notice_1_date: "업데이트",
+        notice_1_text: "CONTROL 멤버 월페이퍼가 다운로드 섹션에 추가되었습니다.",
+        notice_2_date: "포스터 공개",
+        notice_2_text: "개인 멤버 포스터와 두 장의 그룹 포스터가 추가되었습니다.",
+        notice_3_date: "프리세이브",
+        notice_3_text: "CONTROL 데뷔 발매를 위한 공식 플랫폼 버튼이 활성화되었습니다.",
+        release_date: "발매일: 2026년 6월 11일",
+        about_title: "소개",
+        about_1_title: "1NFUZE 소개",
+        about_2_title: "사운드와 아이덴티티",
+        about_3_title: "현재 시대: CONTROL",
+        about_1_body: "1NFUZE는 강렬한 비주얼, 세련된 퍼포먼스, 미래적인 정체성을 중심으로 만들어진 버추얼 K-pop 그룹입니다. 인상적인 콘셉트 디자인과 현대적인 팝 에너지가 어우러져 음악, 스타일, 스토리텔링이 하나로 움직이는 세계를 보여줍니다.",
+        about_2_body: "세련되고 임팩트 있는 사운드와 드라마틱한 비주얼 미학을 바탕으로, 1NFUZE는 탄탄한 보컬, 역동적인 퍼포먼스, 그리고 각 멤버의 뚜렷한 존재감을 결합합니다. 그룹의 정체성은 자신감, 강렬함, 그리고 오래 남는 디지털 시대의 감각에 뿌리를 두고 있습니다.",
+        about_3_body: "CONTROL은 1NFUZE의 첫 번째 시대의 시작을 알리며, 힘과 존재감, 정밀함을 중심으로 한 콘셉트를 통해 그룹을 소개합니다. 날카로운 비주얼 스타일과 전율적인 분위기로, 데뷔 시대는 1NFUZE 세계의 방향성과 앞으로 펼쳐질 이야기를 확실히 보여줍니다.",
+        fan_eyebrow: "팬 콘텐츠",
+        fan_title: "당신은 어떤 1NFUZE 멤버일까요?",
+        fan_body: "1NFUZE 성향 퀴즈를 통해 당신의 에너지, 스타일, 분위기와 가장 잘 맞는 멤버를 확인해 보세요.",
+        fan_button: "퀴즈 시작",
+        members_title: "멤버",
+        animal_haejun: "늑대",
+        animal_jinwoo: "매",
+        animal_jayden: "사자",
+        animal_minjae: "코브라",
+        animal_seonho: "곰",
+        sound_title: "CONTROL의 사운드",
+        sound_body: "CONTROL 시대 속으로 들어가 1NFUZE 데뷔 세계의 전율을 느껴보세요.",
+        player_now: "재생 중",
+        platforms_title: "1NFUZE 듣기",
+        platforms_body: "공식 플랫폼을 통해 CONTROL 시대에 입장하고 모든 발매, 드롭, 컴백 순간을 함께하세요.",
+        platforms_kicker: "공식 플랫폼",
+        platforms_card_title: "공식 감상 플랫폼",
+        platforms_card_body: "아래의 공식 1NFUZE 플랫폼에서 현재 발매곡을 만나보세요.",
+        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
+        profile_kicker: "1NFUZE 멤버 프로필",
+        quiz_kicker: "팬 퀴즈",
+        quiz_title: "당신은 어떤 1NFUZE 멤버일까요?",
+        quiz_subtitle: "다섯 가지 질문에 답하고 당신의 에너지와 가장 잘 어울리는 1NFUZE 멤버를 확인해 보세요.",
+        quiz_start: "퀴즈 시작",
+        quiz_back: "뒤로",
+        quiz_restart: "다시 시작",
+        quiz_result_kicker: "퀴즈 결과",
+        quiz_you_are: "당신은...",
+        quiz_retake: "다시 해보기"
+      }
+    };
+
+    window.currentLanguage = localStorage.getItem('infuzeLanguage') || 'en';
+
+    function applyTranslations(lang) {
+      window.currentLanguage = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('infuzeLanguage', lang);
+      const set = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (set[key]) el.textContent = set[key];
+      });
+      const btn = document.getElementById('langToggleBtn');
+      if (btn) btn.textContent = lang === 'en' ? '한국어' : 'English';
+    }
+
+    function setupLanguageToggle() {
+      const btn = document.getElementById('langToggleBtn');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
+      });
+      applyTranslations(window.currentLanguage);
+  </script>
 </body>
 </html>
