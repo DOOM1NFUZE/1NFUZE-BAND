@@ -6,7 +6,6 @@
   <title>1NFUZE | Official Site</title>
   <meta name="description" content="Official website for 1NFUZE." />
   <style>
-
     :root {
       --line: rgba(183, 201, 255, 0.16);
       --text: #eef3ff;
@@ -22,15 +21,19 @@
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 20% 20%, rgba(121, 71, 255, 0.24), transparent 24%),
-        radial-gradient(circle at 80% 18%, rgba(79, 164, 255, 0.18), transparent 24%),
-        radial-gradient(circle at 50% 60%, rgba(255, 105, 180, 0.10), transparent 24%),
-        linear-gradient(180deg, #04040b 0%, #070815 38%, #070613 100%);
+        linear-gradient(rgba(3, 4, 10, 0.68), rgba(3, 4, 10, 0.78)),
+        url("images/sb-1.png") center center / cover no-repeat fixed;
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
     }
-    a { color: inherit; text-decoration: none; }
+    @media (max-width: 760px) {
+      body {
+        background:
+          linear-gradient(rgba(3, 4, 10, 0.72), rgba(3, 4, 10, 0.82)),
+          url("images/sb-1.png") center center / cover no-repeat;
+      }
+    }a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     .container {
       width: min(calc(100% - 32px), var(--max));
@@ -83,21 +86,6 @@
     .nav a:hover {
       color: var(--text);
       background: rgba(255,255,255,0.06);
-    }
-    .lang-toggle {
-      padding: 10px 14px;
-      border-radius: 999px;
-      color: var(--muted);
-      transition: 0.25s ease;
-      font-size: 0.95rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      cursor: pointer;
-      font-family: inherit;
-    }
-    .lang-toggle:hover {
-      color: var(--text);
-      background: rgba(255,255,255,0.08);
     }
     .hero {
       padding: 56px 0 30px;
@@ -1184,285 +1172,33 @@
       }
     }
 
-  
-    .downloads-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-    .download-card {
-      padding: 18px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background:
-        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-    }
-    .download-preview {
-      aspect-ratio: 3 / 4;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-      margin-bottom: 16px;
-    }
-    .download-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .download-card h3 {
-      margin: 0 0 8px;
-      text-align: center;
-      font-size: 1.22rem;
-    }
-    .download-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.96rem;
-      line-height: 1.6;
-      min-height: 48px;
-    }
-    .download-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .download-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.22s ease;
-      border: 1px solid rgba(255,255,255,0.08);
-      color: var(--text);
-      background: rgba(255,255,255,0.05);
-      text-align: center;
-    }
-    .download-btn:hover {
-      transform: translateY(-2px);
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(146, 244, 255, 0.34);
-    }
-    .download-btn.primary {
-      color: #05101a;
-      background: linear-gradient(90deg, var(--cyan), #f2d8ff 88%);
-      border: 0;
-      box-shadow: 0 12px 28px rgba(146, 244, 255, 0.18);
-    }
-
-    .posters-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-    .poster-card {
-      padding: 18px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background:
-        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-    }
-    .poster-preview {
-      aspect-ratio: 3 / 4;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.03);
-      margin-bottom: 16px;
-    }
-    .poster-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .poster-card h3 {
-      margin: 0 0 8px;
-      text-align: center;
-      font-size: 1.22rem;
-    }
-    .poster-card p {
-      margin: 0 0 14px;
-      color: var(--muted);
-      text-align: center;
-      font-size: 0.96rem;
-      line-height: 1.6;
-      min-height: 48px;
-    }
-    .poster-links {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-    }
-    .poster-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: 0.22s ease;
-      border: 1px solid rgba(255,255,255,0.08);
-      color: #05101a;
-      background: linear-gradient(90deg, var(--cyan), #f2d8ff 88%);
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(146, 244, 255, 0.18);
-    }
-    .poster-btn:hover {
-      transform: translateY(-2px);
-      border-color: rgba(146, 244, 255, 0.34);
-    }
-
-
-    .countdown-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-    .countdown-card,
-    .notices-card {
-      min-height: 220px;
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background:
-        radial-gradient(circle at top right, rgba(120, 91, 255, 0.16), transparent 28%),
-        linear-gradient(180deg, rgba(16, 18, 44, 0.92), rgba(8, 10, 24, 0.96));
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-    }
-    .countdown-label {
-      color: #92f4ff;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-size: 0.78rem;
-      margin-bottom: 12px;
-      display: inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .countdown-title {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      margin: 0 0 10px;
-      line-height: 1;
-    }
-    .countdown-copy {
-      color: var(--muted);
-      line-height: 1.7;
-      margin: 0 0 22px;
-      max-width: 58ch;
-    }
-    .countdown-timer {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .countdown-unit {
-      padding: 18px 12px;
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-      text-align: center;
-    }
-    .countdown-value {
-      display: block;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 800;
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .countdown-small {
-      color: var(--muted);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-    .notice-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 18px;
-    }
-    .notice-item {
-      padding: 14px 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.04);
-    }
-    .notice-date {
-      display: block;
-      color: #92f4ff;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .notice-text {
-      color: #d9e4ff;
-      line-height: 1.6;
-      font-size: 0.96rem;
-    }
-    @media (max-width: 900px) {
-      .countdown-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-    @media (max-width: 640px) {
-      .countdown-timer {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-
-  
   </style>
 </head>
 <body>
-
   <header class="topbar">
     <div class="container topbar-inner">
-      <a href="index.html" class="brand" aria-label="1NFUZE home">
+      <a href="#home" class="brand" aria-label="1NFUZE home">
         <img src="images/logot.png" alt="1NFUZE logo" />
         <span>1NFUZE</span>
       </a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="index.html#about" data-i18n="nav_about">About</a>
-        <a href="members.html" data-i18n="nav_members">Members</a>
-        <a href="music.html" data-i18n="nav_music">Music</a>
-        <a href="index.html#countdown" data-i18n="nav_countdown">Countdown</a>
-        <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
-        <a href="downloads.html" data-i18n="nav_wallpapers">Wallpapers</a>
-        <a href="downloads.html#posters" data-i18n="nav_posters">Posters</a>
-        <a href="music.html#media" data-i18n="nav_platforms">Platforms</a>
-        <button class="lang-toggle" type="button" id="langToggleBtn" aria-label="Switch language">한국어</button>
+        <a href="#about">About</a>
+        <a href="#members">Members</a>
+        <a href="#music">Music</a>
+        <a href="#media">Platforms</a>
       </nav>
     </div>
   </header>
 
   <main>
-<section class="hero" id="home">
+    <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow" data-i18n="hero_eyebrow">Virtual Group</div>
-          <h1><span class="gradient-text">1NFUZE</span><br /><span data-i18n="hero_title">Future in motion.</span></h1>
+          <div class="eyebrow">Virtual Group</div>
+          <h1><span class="gradient-text">1NFUZE</span><br />Future in motion.</h1>
           <div class="hero-actions">
-            <a class="cta cta-primary" href="members.html" data-i18n="hero_cta_members">Members</a>
-            <a class="cta cta-secondary" href="music.html" data-i18n="hero_cta_music">Music</a>
+            <a class="cta cta-primary" href="#members">Members</a>
+            <a class="cta cta-secondary" href="#music">Music</a>
           </div>
         </div>
 
@@ -1470,310 +1206,841 @@
           <div class="logo-frame" aria-label="1NFUZE official logo stage panel">
             <img src="images/logo.png" alt="1NFUZE official logo" />
           </div>
-          <p class="release-date" data-i18n="release_date">Release Date: 11th June 2026</p>
+          <p class="release-date">Release Date: 11th June 2026</p>
         </aside>
       </div>
     </section>
-<section class="section" id="about">
+
+    <section class="section" id="about">
       <div class="container">
         <div class="section-head">
-          <h2 data-i18n="about_title">About</h2>
+          <h2>About</h2>
         </div>
         <div class="panel-grid">
           <div class="panel-card">
-            <h3 data-i18n="about_1_title">About 1NFUZE</h3>
-            <p data-i18n="about_1_body">1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.</p>
+            <h3>About 1NFUZE</h3>
+            <p>1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.</p>
           </div>
           <div class="panel-card">
-            <h3 data-i18n="about_2_title">Sound &amp; Identity</h3>
-            <p data-i18n="about_2_body">Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.</p>
+            <h3>Sound &amp; Identity</h3>
+            <p>Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.</p>
           </div>
           <div class="panel-card">
-            <h3 data-i18n="about_3_title">Current Era: CONTROL</h3>
-            <p data-i18n="about_3_body">CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.</p>
+            <h3>Current Era: CONTROL</h3>
+            <p>CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.</p>
           </div>
         </div>
       </div>
     </section>
-<section class="section" id="countdown">
+
+
+    <section class="section" id="fan-feature">
       <div class="container">
-        <div class="countdown-grid">
-          <article class="countdown-card">
-            <span class="countdown-label" data-i18n="countdown_eyebrow">Countdown</span>
-            <h2 class="countdown-title" data-i18n="countdown_title">Debut Countdown</h2>
-            <p class="countdown-copy" data-i18n="countdown_body">The CONTROL era is almost here. Count down to the 1NFUZE debut release and stay locked in for the latest official updates.</p>
-            <div class="countdown-timer" id="debutCountdown">
-              <div class="countdown-unit">
-                <span class="countdown-value" id="countdownDays">00</span>
-                <span class="countdown-small" data-i18n="countdown_days">Days</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="countdownHours">00</span>
-                <span class="countdown-small" data-i18n="countdown_hours">Hours</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="countdownMinutes">00</span>
-                <span class="countdown-small" data-i18n="countdown_minutes">Minutes</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="countdownSeconds">00</span>
-                <span class="countdown-small" data-i18n="countdown_seconds">Seconds</span>
-              </div>
+        <div class="panel-card fan-feature-card">
+          <div class="fan-feature-copy">
+            <span class="eyebrow">Fan Feature</span>
+            <h2>Which 1NFUZE member are you?</h2>
+            <p>Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.</p>
+          </div>
+          <div class="fan-feature-action">
+            <button class="cta cta-primary fan-feature-btn" type="button" id="quizLaunchBtn">Start the Quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="members">
+      <div class="container">
+        <div class="section-head">
+          <h2>Members</h2>
+        </div>
+
+        <div class="members-grid">
+          <article class="member-card">
+            <div class="member-visual">
+              <img src="images/hj.png.png" alt="Haejun profile image">
+              <button class="profile-trigger" type="button" data-member="haejun">Profile</button>
+            </div>
+            <h3>Haejun <span style="color: var(--muted); font-weight: 600;">(해준)</span></h3>
+            <div class="member-links">
+              <span class="chip">The Wolf</span>
             </div>
           </article>
 
-          <article class="notices-card">
-            <span class="countdown-label" data-i18n="notices_label">Official Notices</span>
-            <div class="notice-list">
-              <div class="notice-item">
-                <span class="notice-date" data-i18n="notice_1_date">Update</span>
-                <div class="notice-text" data-i18n="notice_1_text">CONTROL member wallpapers are now available in the downloads section.</div>
-              </div>
-              <div class="notice-item">
-                <span class="notice-date" data-i18n="notice_2_date">Poster Drop</span>
-                <div class="notice-text" data-i18n="notice_2_text">Individual member posters and both group posters have been added.</div>
-              </div>
-              <div class="notice-item">
-                <span class="notice-date" data-i18n="notice_3_date">Pre-save</span>
-                <div class="notice-text" data-i18n="notice_3_text">Official platform buttons are live for the CONTROL debut release.</div>
-              </div>
+          <article class="member-card">
+            <div class="member-visual">
+              <img src="images/jw.png" alt="Jinwoo profile image" onerror="this.style.display='none'">
+                          <button class="profile-trigger" type="button" data-member="jinwoo">Profile</button>
+            </div>
+            <h3>Jinwoo <span style="color: var(--muted); font-weight: 600;">(진우)</span></h3>
+            <div class="member-links">
+              <span class="chip">The Falcon</span>
             </div>
           </article>
+
+          <article class="member-card">
+            <div class="member-visual">
+              <img src="images/jl.png" alt="Jayden Lee profile image" onerror="this.style.display='none'">
+                          <button class="profile-trigger" type="button" data-member="jayden">Profile</button>
+            </div>
+            <h3>Jayden <span style="color: var(--muted); font-weight: 600;">(제이든 리)</span></h3>
+            <div class="member-links">
+              <span class="chip">The Lion</span>
+            </div>
+          </article>
+
+          <article class="member-card">
+            <div class="member-visual">
+              <img src="images/mj.png" alt="Minjae profile image" onerror="this.style.display='none'">
+                          <button class="profile-trigger" type="button" data-member="minjae">Profile</button>
+            </div>
+            <h3>Minjae <span style="color: var(--muted); font-weight: 600;">(민재)</span></h3>
+            <div class="member-links">
+              
+              <span class="chip">The Cobra</span>
+            </div>
+          </article>
+
+          <article class="member-card">
+            <div class="member-visual">
+              <img src="images/sh.png" alt="Seonho profile image" onerror="this.style.display='none'">
+                          <button class="profile-trigger" type="button" data-member="seonho">Profile</button>
+            </div>
+            <h3>Seonho <span style="color: var(--muted); font-weight: 600;">(선호)</span></h3>
+            <div class="member-links">
+              
+              <span class="chip">The Bear</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="music">
+      <div class="container">
+        <div class="section-head">
+          <h2>The Sound of Control</h2>
+          <p>Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.</p>
+        </div>
+        <div class="sound-grid">
+          <article class="panel-card sound-panel sound-art">
+            <img src="images/control-artwork-left.png" alt="CONTROL era artwork left panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='images/control-art-left.png';}else{this.style.display='none';}">
+          </article>
+
+          <article class="panel-card sound-panel sound-player" id="soundPlayer">
+            <div class="player-top">
+              <div class="player-cover">
+                <img id="trackCover" src="images/logo.png" alt="1NFUZE track artwork" onerror="this.style.display='none'">
+              </div>
+              <div class="player-info">
+                <span class="player-now">Now Playing</span>
+                <h3 class="player-title" id="trackTitle">달이다 (Infuze)</h3>
+              </div>
+            </div>
+
+            <div class="player-wave" aria-hidden="true">
+              <div class="visualizer-bars" id="visualizerBars">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+
+            <div class="player-controls">
+              <button class="icon-btn" id="prevTrack" type="button" aria-label="Previous track">⏮</button>
+              <button class="play-btn" id="playPause" type="button" aria-label="Play or pause">▶</button>
+              <button class="icon-btn" id="nextTrack" type="button" aria-label="Next track">⏭</button>
+            </div>
+
+            <div class="player-bottom">
+              <span class="time-readout" id="currentTime">0:00</span>
+              <input class="range" id="progress" type="range" min="0" max="100" value="0" aria-label="Track progress">
+              <span class="time-readout" id="duration">0:00</span>
+              <span class="volume-icon" aria-hidden="true">🔊</span>
+              <div class="volume-wrap">
+                <input class="volume-range" id="volume" type="range" min="0" max="1" step="0.01" value="0.85" aria-label="Volume">
+              </div>
+            </div>
+
+            <audio id="audioPlayer" preload="metadata"></audio>
+          </article>
+
+          <article class="panel-card sound-panel sound-art">
+            <img src="images/control-art-right.png" alt="CONTROL era artwork right panel" onerror="if(this.dataset.fallback!=='done'){this.dataset.fallback='done';this.src='images/control-artwork-right.png';}else{this.style.display='none';}">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="media">
+      <div class="container">
+        <div class="section-head">
+          <h2>Listen to 1NFUZE</h2>
+          <p>Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.</p>
+        </div>
+        <div class="stream-section-card panel-card">
+          <div class="stream-section-copy">
+            <span class="sound-kicker">Official Platforms</span>
+            <h3>Official listening platforms</h3>
+            <p>Stream the current release through the official 1NFUZE destinations below.</p>
+          </div>
+          <div class="stream-links stream-links-section" id="streamLinks"></div>
         </div>
       </div>
     </section>
   </main>
-<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p style="margin:0; width:100%; text-align:center;" data-i18n="footer_copy">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
-
 
   <script>
-
-    (function () {
-      const targetDate = new Date('2026-06-11T00:00:00');
-      const daysEl = document.getElementById('countdownDays');
-      const hoursEl = document.getElementById('countdownHours');
-      const minutesEl = document.getElementById('countdownMinutes');
-      const secondsEl = document.getElementById('countdownSeconds');
-      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
-
-      function updateCountdown() {
-        const now = new Date();
-        const diff = targetDate - now;
-
-        if (diff <= 0) {
-          daysEl.textContent = '00';
-          hoursEl.textContent = '00';
-          minutesEl.textContent = '00';
-          secondsEl.textContent = '00';
-          return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((diff / (1000 * 60)) % 60);
-        const seconds = Math.floor((diff / 1000) % 60);
-
-        daysEl.textContent = String(days).padStart(2, '0');
-        hoursEl.textContent = String(hours).padStart(2, '0');
-        minutesEl.textContent = String(minutes).padStart(2, '0');
-        secondsEl.textContent = String(seconds).padStart(2, '0');
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-    })();
-  
-  </script>
-
-  <script>
-  const translations = {
-      en: {
-        nav_about: "About",
-        nav_members: "Members",
-        nav_music: "Music",
-        nav_countdown: "Countdown",
-        nav_gallery: "Gallery",
-        nav_wallpapers: "Wallpapers",
-        nav_posters: "Posters",
-        nav_platforms: "Platforms",
-        hero_eyebrow: "Virtual Group",
-        hero_title: "Future in motion.",
-        hero_cta_members: "Members",
-        hero_cta_music: "Music",
-        downloads_eyebrow: "Wallpapers",
-        downloads_title: "CONTROL Wallpapers",
-        downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.",
-        download_desktop: "Desktop",
-        download_mobile: "Mobile",
-        posters_eyebrow: "Posters",
-        posters_title: "CONTROL Posters",
-        posters_body: "Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.",
-        poster_download: "Download Poster",
-        countdown_eyebrow: "Countdown",
-        countdown_title: "Debut Countdown",
-        countdown_body: "The CONTROL era is almost here. Count down to the 1NFUZE debut release and stay locked in for the latest official updates.",
-        countdown_days: "Days",
-        countdown_hours: "Hours",
-        countdown_minutes: "Minutes",
-        countdown_seconds: "Seconds",
-        notices_label: "Official Notices",
-        notice_1_date: "Update",
-        notice_1_text: "CONTROL member wallpapers are now available in the downloads section.",
-        notice_2_date: "Poster Drop",
-        notice_2_text: "Individual member posters and both group posters have been added.",
-        notice_3_date: "Pre-save",
-        notice_3_text: "Official platform buttons are live for the CONTROL debut release.",
-        release_date: "Release Date: 11th June 2026",
-        about_title: "About",
-        about_1_title: "About 1NFUZE",
-        about_2_title: "Sound & Identity",
-        about_3_title: "Current Era: CONTROL",
-        about_1_body: "1NFUZE is a virtual K-pop group built around bold visuals, polished performance, and a futuristic identity. Blending striking concept design with modern pop energy, the group presents a world where music, style, and storytelling move together as one.",
-        about_2_body: "Defined by a sleek, high-impact sound and a visually dramatic aesthetic, 1NFUZE combines strong vocals, dynamic performance, and distinctive member presence. The group’s identity is rooted in confidence, intensity, and a digital-era edge designed to leave a lasting impression.",
-        about_3_body: "CONTROL marks the beginning of 1NFUZE’s first era, introducing the group through a concept centred on power, presence, and precision. With a sharp visual style and a charged atmosphere, the debut era establishes the tone for the world of 1NFUZE and what is still to come.",
-        fan_eyebrow: "Fan Feature",
-        fan_title: "Which 1NFUZE member are you?",
-        fan_body: "Take the 1NFUZE personality quiz and find out which member matches your energy, style, and vibe the most.",
-        fan_button: "Start the Quiz",
-        members_title: "Members",
-        animal_haejun: "The Wolf",
-        animal_jinwoo: "The Falcon",
-        animal_jayden: "The Lion",
-        animal_minjae: "The Cobra",
-        animal_seonho: "The Bear",
-        sound_title: "The Sound of Control",
-        sound_body: "Step into the CONTROL era and feel the charge behind 1NFUZE’s debut world.",
-        player_now: "Now Playing",
-        platforms_title: "Listen to 1NFUZE",
-        platforms_body: "Enter the CONTROL era through the official platforms and keep up with every release, drop, and comeback moment.",
-        platforms_kicker: "Official Platforms",
-        platforms_card_title: "Official listening platforms",
-        platforms_card_body: "Stream the current release through the official 1NFUZE destinations below.",
-        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
-        profile_kicker: "1NFUZE Member Profile",
-        quiz_kicker: "Fan Quiz",
-        quiz_title: "Which 1NFUZE member are you?",
-        quiz_subtitle: "Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.",
-        quiz_start: "Start Quiz",
-        quiz_back: "Back",
-        quiz_restart: "Restart",
-        quiz_result_kicker: "Quiz Result",
-        quiz_you_are: "You are...",
-        quiz_retake: "Take Quiz Again"
+    const controlPlaylist = [
+      {
+        title: "달이다 (Infuze)",
+        audio: "audio/track1.mp3",
+        cover: "images/logo.png",
+        links: [
+          { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Apple Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2FwcGxlL2F1dGhvcml6ZT9zdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE1qVTRaR0UwTW1Fd01EQXdPVEl3TURVek5qVTBZaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxQlpHUWlMQ0oxYzJWeVEyOTFiblJ5ZVNJNklrZENJaXdpYzJodmNuUkpaQ0k2SW1OdmJuUnliMnd0TVc1bWRYcGxJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTlrYVhSMGJ5NW1iU0lzSW5ObGNuWnBZMlZPWVcxbElqb2lZWEJ3YkdVaUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpReFkyRXhOR1psTFdVMVpXSXROREV4TmkxaVpEYzJMVEl6TnpnME1UUmpObVZqWWlKOSIsInNydmMiOiJhcHBsZSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Audiomack", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2F1ZGlvbWFjay9hdXRoZW50aWNhdGU_c3RhdGU9ZXlKa1lreHBibXRKWkNJNklqWmhNalU0WkdFME1tRXdNREF3T1RJd01EVXpOalUwWWlJc0ltRmpkR2x2YmxSNWNHVWlPbTUxYkd3c0ltTjBZU0k2SWxCeVpTMVRZWFpsSWl3aWRYTmxja052ZFc1MGNua2lPaUpIUWlJc0luTm9iM0owU1dRaU9pSmpiMjUwY205c0xURnVablY2WlNJc0ltUnZiV0ZwYmlJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0waUxDSnpaWEoyYVdObFRtRnRaU0k2SW1GMVpHbHZiV0ZqYXlJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wJnJlZGlyZWN0X3VyaT1odHRwcyUzQSUyRiUyRmFwaS5mZm0udG8lMkZ3ZWJob29rJTJGYXVkaW9tYWNrJTJGYXV0aG9yaXplIiwic3J2YyI6ImF1ZGlvbWFjayIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Deezer", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vY29ubmVjdC5kZWV6ZXIuY29tL29hdXRoL2F1dGgucGhwP2FwcF9pZD0xOTAzMjImcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZkZWV6ZXIlMkZhdXRob3JpemUmcGVybXM9ZW1haWwlMkNiYXNpY19hY2Nlc3MlMkNvZmZsaW5lX2FjY2VzcyUyQ21hbmFnZV9saWJyYXJ5JTJDbWFuYWdlX2NvbW11bml0eSUyQ2xpc3RlbmluZ19oaXN0b3J5JnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkltUmxaWHBsY2lJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wIiwic3J2YyI6ImRlZXplciIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" }
+        ]
       },
-      ko: {
-        nav_about: "소개",
-        nav_members: "멤버",
-        nav_music: "음악",
-        nav_countdown: "카운트다운",
-        nav_gallery: "갤러리",
-        nav_wallpapers: "월페이퍼",
-        nav_posters: "포스터",
-        nav_platforms: "플랫폼",
-        hero_eyebrow: "버추얼 그룹",
-        hero_title: "움직이는 미래.",
-        hero_cta_members: "멤버",
-        hero_cta_music: "음악",
-        downloads_eyebrow: "월페이퍼",
-        downloads_title: "CONTROL 월페이퍼",
-        downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요. GitHub Pages에서는 이미지 파일을 downloads/ 같은 정적 폴더에 넣으면 이 버튼들이 바로 연결됩니다.",
-        download_desktop: "데스크톱",
-        download_mobile: "모바일",
-        posters_eyebrow: "포스터",
-        posters_title: "CONTROL 포스터",
-        posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요. GitHub Pages에서는 이 파일들을 downloads/ 폴더에 넣으면 버튼이 정상 작동합니다.",
-        poster_download: "포스터 다운로드",
-        countdown_eyebrow: "카운트다운",
-        countdown_title: "데뷔 카운트다운",
-        countdown_body: "CONTROL 시대가 곧 시작됩니다. 1NFUZE 데뷔 발매까지 남은 시간을 확인하고 최신 공식 업데이트를 놓치지 마세요.",
-        countdown_days: "일",
-        countdown_hours: "시간",
-        countdown_minutes: "분",
-        countdown_seconds: "초",
-        notices_label: "공식 공지",
-        notice_1_date: "업데이트",
-        notice_1_text: "CONTROL 멤버 월페이퍼가 다운로드 섹션에 추가되었습니다.",
-        notice_2_date: "포스터 공개",
-        notice_2_text: "개인 멤버 포스터와 두 장의 그룹 포스터가 추가되었습니다.",
-        notice_3_date: "프리세이브",
-        notice_3_text: "CONTROL 데뷔 발매를 위한 공식 플랫폼 버튼이 활성화되었습니다.",
-        release_date: "발매일: 2026년 6월 11일",
-        about_title: "소개",
-        about_1_title: "1NFUZE 소개",
-        about_2_title: "사운드와 아이덴티티",
-        about_3_title: "현재 시대: CONTROL",
-        about_1_body: "1NFUZE는 강렬한 비주얼, 세련된 퍼포먼스, 미래적인 정체성을 중심으로 만들어진 버추얼 K-pop 그룹입니다. 인상적인 콘셉트 디자인과 현대적인 팝 에너지가 어우러져 음악, 스타일, 스토리텔링이 하나로 움직이는 세계를 보여줍니다.",
-        about_2_body: "세련되고 임팩트 있는 사운드와 드라마틱한 비주얼 미학을 바탕으로, 1NFUZE는 탄탄한 보컬, 역동적인 퍼포먼스, 그리고 각 멤버의 뚜렷한 존재감을 결합합니다. 그룹의 정체성은 자신감, 강렬함, 그리고 오래 남는 디지털 시대의 감각에 뿌리를 두고 있습니다.",
-        about_3_body: "CONTROL은 1NFUZE의 첫 번째 시대의 시작을 알리며, 힘과 존재감, 정밀함을 중심으로 한 콘셉트를 통해 그룹을 소개합니다. 날카로운 비주얼 스타일과 전율적인 분위기로, 데뷔 시대는 1NFUZE 세계의 방향성과 앞으로 펼쳐질 이야기를 확실히 보여줍니다.",
-        fan_eyebrow: "팬 콘텐츠",
-        fan_title: "당신은 어떤 1NFUZE 멤버일까요?",
-        fan_body: "1NFUZE 성향 퀴즈를 통해 당신의 에너지, 스타일, 분위기와 가장 잘 맞는 멤버를 확인해 보세요.",
-        fan_button: "퀴즈 시작",
-        members_title: "멤버",
-        animal_haejun: "늑대",
-        animal_jinwoo: "매",
-        animal_jayden: "사자",
-        animal_minjae: "코브라",
-        animal_seonho: "곰",
-        sound_title: "CONTROL의 사운드",
-        sound_body: "CONTROL 시대 속으로 들어가 1NFUZE 데뷔 세계의 전율을 느껴보세요.",
-        player_now: "재생 중",
-        platforms_title: "1NFUZE 듣기",
-        platforms_body: "공식 플랫폼을 통해 CONTROL 시대에 입장하고 모든 발매, 드롭, 컴백 순간을 함께하세요.",
-        platforms_kicker: "공식 플랫폼",
-        platforms_card_title: "공식 감상 플랫폼",
-        platforms_card_body: "아래의 공식 1NFUZE 플랫폼에서 현재 발매곡을 만나보세요.",
-        footer_copy: "©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved",
-        profile_kicker: "1NFUZE 멤버 프로필",
-        quiz_kicker: "팬 퀴즈",
-        quiz_title: "당신은 어떤 1NFUZE 멤버일까요?",
-        quiz_subtitle: "다섯 가지 질문에 답하고 당신의 에너지와 가장 잘 어울리는 1NFUZE 멤버를 확인해 보세요.",
-        quiz_start: "퀴즈 시작",
-        quiz_back: "뒤로",
-        quiz_restart: "다시 시작",
-        quiz_result_kicker: "퀴즈 결과",
-        quiz_you_are: "당신은...",
-        quiz_retake: "다시 해보기"
+      {
+        title: "제어 (Control)",
+        audio: "audio/track2.mp3",
+        cover: "images/logo.png",
+        links: [
+          { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Apple Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2FwcGxlL2F1dGhvcml6ZT9zdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE1qVTRaR0UwTW1Fd01EQXdPVEl3TURVek5qVTBZaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxQlpHUWlMQ0oxYzJWeVEyOTFiblJ5ZVNJNklrZENJaXdpYzJodmNuUkpaQ0k2SW1OdmJuUnliMnd0TVc1bWRYcGxJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTlrYVhSMGJ5NW1iU0lzSW5ObGNuWnBZMlZPWVcxbElqb2lZWEJ3YkdVaUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpReFkyRXhOR1psTFdVMVpXSXROREV4TmkxaVpEYzJMVEl6TnpnME1UUmpObVZqWWlKOSIsInNydmMiOiJhcHBsZSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Audiomack", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2F1ZGlvbWFjay9hdXRoZW50aWNhdGU_c3RhdGU9ZXlKa1lreHBibXRKWkNJNklqWmhNalU0WkdFME1tRXdNREF3T1RJd01EVXpOalUwWWlJc0ltRmpkR2x2YmxSNWNHVWlPbTUxYkd3c0ltTjBZU0k2SWxCeVpTMVRZWFpsSWl3aWRYTmxja052ZFc1MGNua2lPaUpIUWlJc0luTm9iM0owU1dRaU9pSmpiMjUwY205c0xURnVablY2WlNJc0ltUnZiV0ZwYmlJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0waUxDSnpaWEoyYVdObFRtRnRaU0k2SW1GMVpHbHZiV0ZqYXlJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wJnJlZGlyZWN0X3VyaT1odHRwcyUzQSUyRiUyRmFwaS5mZm0udG8lMkZ3ZWJob29rJTJGYXVkaW9tYWNrJTJGYXV0aG9yaXplIiwic3J2YyI6ImF1ZGlvbWFjayIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Deezer", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vY29ubmVjdC5kZWV6ZXIuY29tL29hdXRoL2F1dGgucGhwP2FwcF9pZD0xOTAzMjImcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZkZWV6ZXIlMkZhdXRob3JpemUmcGVybXM9ZW1haWwlMkNiYXNpY19hY2Nlc3MlMkNvZmZsaW5lX2FjY2VzcyUyQ21hbmFnZV9saWJyYXJ5JTJDbWFuYWdlX2NvbW11bml0eSUyQ2xpc3RlbmluZ19oaXN0b3J5JnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkltUmxaWHBsY2lJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wIiwic3J2YyI6ImRlZXplciIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" }
+        ]
+      },
+      {
+        title: "해내 (바로잡아) Do It (Make it Right)",
+        audio: "audio/track3.mp3",
+        cover: "images/logo.png",
+        links: [
+          { label: "Spotify", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiJjM2E2NDhmZC1iMTBkLTQ5OGEtYWVlOC1kMjg3YjQwZGVhODIiLCJzaWQiOiJiN2U1OTIyNy05MDdkLTQxYjAtOTVjZS1kNTM1NzUwMmQ3NzciLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6Imh0dHBzOi8vZGl0dG8uZm0vIiwiaG9zdCI6ImRpdHRvLmZtIiwibGFuZyI6ImVuLUdCIiwiaXBDb3VudHJ5IjoiR0IifSwiaXNXZWJwU3VwcG9ydGVkIjp0cnVlLCJnZHByRW5mb3JjZSI6dHJ1ZSwiY291bnRyeUNvZGUiOiJHQiIsImlzQm90IjpmYWxzZSwidXNlQWZmIjoib3JpZ2luIiwidmlkIjoiNGZhYWVlYTItZWY2Yy00OGZkLWJjN2QtOWFlYTZiZGU4MDRiIiwiaWQiOiI2YTI1OGRhNDJhMDAwMDkyMDA1MzY1NGIiLCJwcnYiOmZhbHNlLCJpc1ByZVIiOnRydWUsInR6byI6bnVsbCwiY2giOm51bGwsImFuIjpudWxsLCJkZXN0VXJsIjoiaHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbS9hdXRob3JpemU_Y2xpZW50X2lkPTY2ZDNjZGI0NDgwNzRhMGQ4OGU5YjA4YmFhZjJmM2Q3JnJlc3BvbnNlX3R5cGU9Y29kZSZyZWRpcmVjdF91cmk9aHR0cHMlM0ElMkYlMkZhcGkuZmZtLnRvJTJGd2ViaG9vayUyRnNwb3RpZnklMkZhdXRob3JpemUmc2NvcGU9dXNlci1yZWFkLXByaXZhdGUlMjB1c2VyLXJlYWQtYmlydGhkYXRlJTIwdXNlci1yZWFkLWVtYWlsJTIwdXNlci1saWJyYXJ5LW1vZGlmeSUyMHVzZXItbGlicmFyeS1yZWFkJTIwdXNlci1yZWFkLXJlY2VudGx5LXBsYXllZCUyMHVzZXItZm9sbG93LXJlYWQlMjB1c2VyLWZvbGxvdy1tb2RpZnklMjB1c2VyLXRvcC1yZWFkJTIwcGxheWxpc3QtbW9kaWZ5LXB1YmxpYyUyMHBsYXlsaXN0LXJlYWQtcHJpdmF0ZSUyMHBsYXlsaXN0LW1vZGlmeS1wcml2YXRlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkluTndiM1JwWm5raUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpSbVlXRmxaV0V5TFdWbU5tTXRORGhtWkMxaVl6ZGtMVGxoWldFMlltUmxPREEwWWlKOSYxMDExbGp3RUgiLCJzcnZjIjoic3BvdGlmeSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "YouTube Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbS9vL29hdXRoMi92Mi9hdXRoP2FjY2Vzc190eXBlPW9mZmxpbmUmaW5jbHVkZV9ncmFudGVkX3Njb3Blcz10cnVlJnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNklubHZkWFIxWW1WdGRYTnBZeUlzSW5CeWIyUjFZM1FpT2lKemJXRnlkR3hwYm1zaUxDSnlaV1JwY21WamRGVnlhU0k2SW1oMGRIQnpPaTh2WkdsMGRHOHVabTB2WTI5dWRISnZiQzB4Ym1aMWVtVXZjSEpsYzJGMlpXTmhiR3hpWVdOcklpd2labUZzYkdKaFkydFZjbXdpT201MWJHd3NJbWx6VUhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpYVhOR2RYUjFjbVZTWld4bFlYTmxJanAwY25WbExDSmhjblJwYzNSSlpDSTZJalpoTWpVNFpHRXdNbVF3TURBd016UXdNRGxoTURNMFppSXNJbUZ5ZEdsemRFOTNibVZ5SWpvaU5XTTFNR0kxTVdReE5EQXdNREF4T1RBd05qZzJPRGt4SWl3aVlXTjBhVzl1U1dRaU9tNTFiR3dzSW1ka2NISkZibVp2Y21ObElqcDBjblZsTENKc2FXNXJWSGx3WlNJNmJuVnNiQ3dpZFhObGNrbFFJam9pT0RndU9UY3VNVFl5TGpFeElpd2ljbVYzWVhKa1ZYTmxja2xrSWpwdWRXeHNMQ0p5WldabGNuSmhiRWxrSWpwdWRXeHNMQ0oxZFdsa0lqb2lOREZqWVRFMFptVXRaVFZsWWkwME1URTJMV0prTnpZdE1qTTNPRFF4TkdNMlpXTmlJbjAmcmVzcG9uc2VfdHlwZT1jb2RlJmNvbnNlbnQ9UGxlYXNlJTIwYWxsb3cmcHJvbXB0PWNvbnNlbnQmc2NvcGU9aHR0cHMlM0ElMkYlMkZ3d3cuZ29vZ2xlYXBpcy5jb20lMkZhdXRoJTJGeW91dHViZSUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRnVzZXJpbmZvLnByb2ZpbGUlMjBodHRwcyUzQSUyRiUyRnd3dy5nb29nbGVhcGlzLmNvbSUyRmF1dGglMkZ1c2VyaW5mby5lbWFpbCUyMGh0dHBzJTNBJTJGJTJGd3d3Lmdvb2dsZWFwaXMuY29tJTJGYXV0aCUyRm11c2ljJmNsaWVudF9pZD03Njc4Mjc5MjMwMjctaGdramFmamJqaTEydXJ1dmxpNXQ5cWxtZGF0a3B2MjIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20mcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZ5b3V0dWJlJTJGYXV0aG9yaXplIiwic3J2YyI6InlvdXR1YmVtdXNpYyIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Apple Music", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2FwcGxlL2F1dGhvcml6ZT9zdGF0ZT1leUprWWt4cGJtdEpaQ0k2SWpaaE1qVTRaR0UwTW1Fd01EQXdPVEl3TURVek5qVTBZaUlzSW1GamRHbHZibFI1Y0dVaU9tNTFiR3dzSW1OMFlTSTZJbEJ5WlMxQlpHUWlMQ0oxYzJWeVEyOTFiblJ5ZVNJNklrZENJaXdpYzJodmNuUkpaQ0k2SW1OdmJuUnliMnd0TVc1bWRYcGxJaXdpWkc5dFlXbHVJam9pYUhSMGNITTZMeTlrYVhSMGJ5NW1iU0lzSW5ObGNuWnBZMlZPWVcxbElqb2lZWEJ3YkdVaUxDSndjbTlrZFdOMElqb2ljMjFoY25Sc2FXNXJJaXdpY21Wa2FYSmxZM1JWY21raU9pSm9kSFJ3Y3pvdkwyUnBkSFJ2TG1adEwyTnZiblJ5YjJ3dE1XNW1kWHBsTDNCeVpYTmhkbVZqWVd4c1ltRmpheUlzSW1aaGJHeGlZV05yVlhKc0lqcHVkV3hzTENKcGMxQnlaVkpsYkdWaGMyVWlPblJ5ZFdVc0ltbHpSblYwZFhKbFVtVnNaV0Z6WlNJNmRISjFaU3dpWVhKMGFYTjBTV1FpT2lJMllUSTFPR1JoTURKa01EQXdNRE0wTURBNVlUQXpOR1lpTENKaGNuUnBjM1JQZDI1bGNpSTZJalZqTlRCaU5URmtNVFF3TURBd01Ua3dNRFk0TmpnNU1TSXNJbUZqZEdsdmJrbGtJanB1ZFd4c0xDSm5aSEJ5Ulc1bWIzSmpaU0k2ZEhKMVpTd2liR2x1YTFSNWNHVWlPbTUxYkd3c0luVnpaWEpKVUNJNklqZzRMamszTGpFMk1pNHhNU0lzSW5KbGQyRnlaRlZ6WlhKSlpDSTZiblZzYkN3aWNtVm1aWEp5WVd4SlpDSTZiblZzYkN3aWRYVnBaQ0k2SWpReFkyRXhOR1psTFdVMVpXSXROREV4TmkxaVpEYzJMVEl6TnpnME1UUmpObVZqWWlKOSIsInNydmMiOiJhcHBsZSIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Audiomack", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vYXBpLmZmbS50by93ZWJob29rL2F1ZGlvbWFjay9hdXRoZW50aWNhdGU_c3RhdGU9ZXlKa1lreHBibXRKWkNJNklqWmhNalU0WkdFME1tRXdNREF3T1RJd01EVXpOalUwWWlJc0ltRmpkR2x2YmxSNWNHVWlPbTUxYkd3c0ltTjBZU0k2SWxCeVpTMVRZWFpsSWl3aWRYTmxja052ZFc1MGNua2lPaUpIUWlJc0luTm9iM0owU1dRaU9pSmpiMjUwY205c0xURnVablY2WlNJc0ltUnZiV0ZwYmlJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0waUxDSnpaWEoyYVdObFRtRnRaU0k2SW1GMVpHbHZiV0ZqYXlJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wJnJlZGlyZWN0X3VyaT1odHRwcyUzQSUyRiUyRmFwaS5mZm0udG8lMkZ3ZWJob29rJTJGYXVkaW9tYWNrJTJGYXV0aG9yaXplIiwic3J2YyI6ImF1ZGlvbWFjayIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" },
+          { label: "Deezer", url: "https://api.ffm.to/sl/e/ps/control-1nfuze?cd=eyJ1YSI6eyJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS8xNDguMC4wLjAgU2FmYXJpLzUzNy4zNiBFZGcvMTQ4LjAuMC4wIiwiYnJvd3NlciI6eyJuYW1lIjoiRWRnZSIsInZlcnNpb24iOiIxNDguMC4wLjAiLCJtYWpvciI6IjE0OCJ9LCJjcHUiOnsiYXJjaGl0ZWN0dXJlIjoiYW1kNjQifSwiZGV2aWNlIjp7fSwiZW5naW5lIjp7Im5hbWUiOiJCbGluayIsInZlcnNpb24iOiIxNDguMC4wLjAifSwib3MiOnsibmFtZSI6IldpbmRvd3MiLCJ2ZXJzaW9uIjoiMTAifX0sImNsaWVudCI6eyJyaWQiOiI1NjM4YjVkYi1jZDNkLTQxYWMtOWY1Ny00NTUzNDE4MGMzOTkiLCJzaWQiOiJjODAxYjc4OS0xNzg3LTQ1NmQtOTg4Yy0xYTQ1MGJlMDhmNzgiLCJpcCI6Ijg4Ljk3LjE2Mi4xMSIsInJlZiI6IiIsImhvc3QiOiJkaXR0by5mbSIsImxhbmciOiJlbi1HQiIsImlwQ291bnRyeSI6IkdCIn0sImlzV2VicFN1cHBvcnRlZCI6dHJ1ZSwiZ2RwckVuZm9yY2UiOnRydWUsImNvdW50cnlDb2RlIjoiR0IiLCJpc0JvdCI6ZmFsc2UsInVzZUFmZiI6Im9yaWdpbiIsInZpZCI6IjQxY2ExNGZlLWU1ZWItNDExNi1iZDc2LTIzNzg0MTRjNmVjYiIsImlkIjoiNmEyNThkYTQyYTAwMDA5MjAwNTM2NTRiIiwicHJ2IjpmYWxzZSwiaXNQcmVSIjp0cnVlLCJ0em8iOm51bGwsImNoIjpudWxsLCJhbiI6bnVsbCwiZGVzdFVybCI6Imh0dHBzOi8vY29ubmVjdC5kZWV6ZXIuY29tL29hdXRoL2F1dGgucGhwP2FwcF9pZD0xOTAzMjImcmVkaXJlY3RfdXJpPWh0dHBzJTNBJTJGJTJGYXBpLmZmbS50byUyRndlYmhvb2slMkZkZWV6ZXIlMkZhdXRob3JpemUmcGVybXM9ZW1haWwlMkNiYXNpY19hY2Nlc3MlMkNvZmZsaW5lX2FjY2VzcyUyQ21hbmFnZV9saWJyYXJ5JTJDbWFuYWdlX2NvbW11bml0eSUyQ2xpc3RlbmluZ19oaXN0b3J5JnN0YXRlPWV5SmtZa3hwYm50SlpDSTZJalpoTWpVNFpHRTBNbUV3TURBd09USXdNRFV6TmpVMFlpSXNJbUZqZEdsdmJsUjVjR1VpT201MWJHd3NJbU4wWVNJNklsQnlaUzFUWVhabElpd2lkWE5sY2tOdmRXNTBjbmtpT2lKSFFpSXNJbk5vYjNKMFNXUWlPaUpqYjI1MGNtOXNMVEZ1Wm5WNlpTSXNJbVJ2YldGcGJpSTZJbWgwZEhCek9pOHZaR2wwZEc4dVptMGlMQ0p6WlhKMmFXTmxUbUZ0WlNJNkltUmxaWHBsY2lJc0luQnliMlIxWTNRaU9pSnpiV0Z5ZEd4cGJtc2lMQ0p5WldScGNtVmpkRlZ5YVNJNkltaDBkSEJ6T2k4dlpHbDBkRzh1Wm0wdlkyOXVkSEp2YkMweGJtWjFlbVV2Y0hKbGMyRjJaV05oYkd4aVlXTnJJaXdpWm1Gc2JHSmhZMnRWY213aU9tNTFiR3dzSW1selVISmxVbVZzWldGelpTSTZkSEoxWlN3aWFYTkdkWFIxY21WU1pXeGxZWE5sSWpwMGNuVmxMQ0poY25ScGMzUkpaQ0k2SWpaaE1qVTRaR0V3TW1Rd01EQXdNelF3TURsaE1ETTBaaUlzSW1GeWRHbHpkRTkzYm1WeUlqb2lOV00xTUdJMU1XUXhOREF3TURBeE9UQXdOamcyT0RreElpd2lZV04wYVc5dVNXUWlPbTUxYkd3c0ltZGtjSEpGYm1admNtTmxJanAwY25WbExDSnNhVzVyVkhsd1pTSTZiblZzYkN3aWRYTmxja2xRSWpvaU9EZ3VPVGN1TVRZeUxqRXhJaXdpY21WM1lYSmtWWE5sY2tsa0lqcHVkV3hzTENKeVpXWmxjbkpoYkVsa0lqcHVkV3hzTENKMWRXbGtJam9pTkRGallURTBabVV0WlRWbFlpMDBNVEUyTFdKa056WXRNak0zT0RReE5HTTJaV05pSW4wIiwic3J2YyI6ImRlZXplciIsInByb2R1Y3QiOiJzbWFydGxpbmsiLCJzaG9ydElkIjoiY29udHJvbC0xbmZ1emUiLCJpc0F1dGhvcml6YXRpb25SZXF1aXJlZCI6dHJ1ZSwib3duZXIiOiI1YzUwYjUxZDE0MDAwMDE5MDA2ODY4OTEiLCJ0ZW5hbnQiOiI1ZDJjMjk2M2YwZDUxZWViZDI0ZTc3ODciLCJhciI6IjZhMjU4ZGEwMmQwMDAwMzQwMDlhMDM0ZiIsImlzU2hvcnRMaW5rIjpmYWxzZSwibmF0aXZlIjpmYWxzZX0" }
+        ]
       }
+    ];
+
+    const audio = document.getElementById('audioPlayer');
+    const playPauseBtn = document.getElementById('playPause');
+    const prevTrackBtn = document.getElementById('prevTrack');
+    const nextTrackBtn = document.getElementById('nextTrack');
+    const progress = document.getElementById('progress');
+    const volume = document.getElementById('volume');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const trackTitle = document.getElementById('trackTitle');
+    const trackCover = document.getElementById('trackCover');
+    const streamLinks = document.getElementById('streamLinks');
+    const soundPlayer = document.getElementById('soundPlayer');
+    const visualizerBars = Array.from(document.querySelectorAll('#visualizerBars span'));
+
+    const platformIcons = {
+      "spotify": "images/spotify.png",
+      "youtube music": "images/youtube-music.png",
+      "apple music": "images/apple-music.png",
+      "audiomack": "images/audiomack.png",
+      "deezer": "images/deezer.png"
     };
 
-    window.currentLanguage = localStorage.getItem('infuzeLanguage') || 'en';
+    let currentTrackIndex = 0;
+    let visualizerFrame = null;
+    let visualizerMemory = new Array(24).fill(0.45);
+    let visualizerPhase = 0;
 
-    function applyTranslations(lang) {
-      window.currentLanguage = lang;
-      document.documentElement.lang = lang;
-      localStorage.setItem('infuzeLanguage', lang);
-      const set = translations[lang] || translations.en;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (set[key]) el.textContent = set[key];
-      });
-      const btn = document.getElementById('langToggleBtn');
-      if (btn) btn.textContent = lang === 'en' ? '한국어' : 'English';
+    function formatTime(time) {
+      if (!Number.isFinite(time)) return '0:00';
+      const minutes = Math.floor(time / 60);
+      const seconds = Math.floor(time % 60).toString().padStart(2, '0');
+      return `${minutes}:${seconds}`;
     }
 
-  function setupLanguageToggle() {
-    const btn = document.getElementById('langToggleBtn');
-    if (!btn) return;
+    function setRangeFill(input, percent) {
+      input.style.setProperty('--progress', `${percent}%`);
+    }
 
-    btn.onclick = () => {
-      applyTranslations(window.currentLanguage === 'en' ? 'ko' : 'en');
+    function renderLinks(links = []) {
+      streamLinks.innerHTML = '';
+      links.filter(link => link.url).forEach(link => {
+        const a = document.createElement('a');
+        a.className = 'stream-link';
+        a.href = link.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.setAttribute('aria-label', link.label);
+
+        const key = (link.label || '').trim().toLowerCase();
+        const iconSrc = platformIcons[key];
+
+        if (iconSrc) {
+          const img = document.createElement('img');
+          img.src = iconSrc;
+          img.alt = link.label;
+          img.loading = 'lazy';
+          img.onerror = () => {
+            a.textContent = link.label;
+          };
+          a.appendChild(img);
+        } else {
+          a.textContent = link.label;
+        }
+
+        streamLinks.appendChild(a);
+      });
+    }
+
+    function setIdleVisualizer() {
+      const idle = [0.26, 0.34, 0.42, 0.52, 0.60, 0.68, 0.74, 0.62, 0.50, 0.40, 0.32, 0.28, 0.28, 0.32, 0.40, 0.50, 0.62, 0.74, 0.68, 0.60, 0.52, 0.42, 0.34, 0.26];
+      visualizerBars.forEach((bar, i) => {
+        const level = idle[i];
+        visualizerMemory[i] = level;
+        bar.style.height = `${16 + level * 46}px`;
+        bar.style.opacity = `${0.84 + level * 0.14}`;
+        bar.style.transform = 'translateY(0)';
+      });
+    }
+
+    async function ensureAnalyser() {
+      return true;
+    }
+
+    function drawVisualizer() {
+      const isPlaying = !audio.paused && !audio.ended;
+      const barCount = visualizerBars.length;
+      const t = (audio.currentTime || 0);
+      const pseudoEnergy = 0.34 + Math.abs(Math.sin(t * 2.2)) * 0.18;
+
+      visualizerPhase += 0.018 + pseudoEnergy * 0.02;
+
+      const levels = [];
+      for (let i = 0; i < barCount; i++) {
+        const mirrorIndex = i < barCount / 2 ? i : (barCount - 1 - i);
+        const centreLift = 1 - Math.abs((i / Math.max(1, barCount - 1)) - 0.5) * 0.55;
+
+        const waveA = Math.sin(visualizerPhase * 3.6 + i * 0.42) * 0.5 + 0.5;
+        const waveB = Math.sin(visualizerPhase * 2.0 - i * 0.21 + 1.1) * 0.5 + 0.5;
+        const waveC = Math.sin(visualizerPhase * 5.1 + mirrorIndex * 0.62) * 0.5 + 0.5;
+
+        const pulseL = Math.max(0, 1 - Math.abs(i - (6 + Math.sin(visualizerPhase * 1.15) * 4)) / 5);
+        const pulseR = Math.max(0, 1 - Math.abs(i - (17 + Math.cos(visualizerPhase * 1.05) * 4)) / 5);
+
+        const stylised = waveA * 0.22 + waveB * 0.16 + waveC * 0.11 + pulseL * 0.11 + pulseR * 0.11;
+        let level = (0.18 + stylised + pseudoEnergy * 0.16) * centreLift;
+
+        level = Math.max(0.16, Math.min(0.98, level));
+        visualizerMemory[i] = visualizerMemory[i] * 0.58 + level * 0.42;
+        levels.push(visualizerMemory[i]);
+      }
+
+      visualizerBars.forEach((bar, i) => {
+        const level = levels[i];
+        bar.style.height = `${15 + level * 52}px`;
+        bar.style.opacity = `${0.78 + level * 0.22}`;
+        bar.style.transform = `translateY(${(1 - level) * 2}px)`;
+      });
+
+      if (isPlaying) {
+        visualizerFrame = requestAnimationFrame(drawVisualizer);
+      } else {
+        setIdleVisualizer();
+      }
+    }
+
+    function startVisualizer() {
+      cancelAnimationFrame(visualizerFrame);
+      drawVisualizer();
+    }
+
+    function stopVisualizer() {
+      cancelAnimationFrame(visualizerFrame);
+      setIdleVisualizer();
+    }
+
+    function loadTrack(index, autoplay = false) {
+      currentTrackIndex = (index + controlPlaylist.length) % controlPlaylist.length;
+      const track = controlPlaylist[currentTrackIndex];
+      audio.src = track.audio;
+      trackTitle.textContent = track.title;
+      if (track.cover) trackCover.src = track.cover;
+      renderLinks(track.links || []);
+      progress.value = 0;
+      currentTimeEl.textContent = '0:00';
+      durationEl.textContent = '0:00';
+      setRangeFill(progress, 0);
+
+      if (autoplay) {
+        audio.play().catch(() => {});
+      } else {
+        stopVisualizer();
+        updatePlayState();
+      }
+    }
+
+    function updatePlayState() {
+      const isPlaying = !audio.paused;
+      playPauseBtn.textContent = isPlaying ? '❚❚' : '▶';
+      soundPlayer.classList.toggle('playing', isPlaying);
+    }
+
+    playPauseBtn.addEventListener('click', async () => {
+      if (!audio.src) loadTrack(currentTrackIndex);
+      if (audio.paused) {
+        await ensureAnalyser();
+        audio.play().catch(() => {});
+      } else {
+        audio.pause();
+      }
+    });
+
+    prevTrackBtn.addEventListener('click', async () => {
+      const shouldAutoplay = !audio.paused;
+      if (shouldAutoplay) await ensureAnalyser();
+      loadTrack(currentTrackIndex - 1, shouldAutoplay);
+    });
+
+    nextTrackBtn.addEventListener('click', async () => {
+      const shouldAutoplay = !audio.paused;
+      if (shouldAutoplay) await ensureAnalyser();
+      loadTrack(currentTrackIndex + 1, shouldAutoplay);
+    });
+
+    audio.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audio.duration);
+    });
+
+    audio.addEventListener('timeupdate', () => {
+      const percent = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      progress.value = percent;
+      setRangeFill(progress, percent);
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+
+    audio.addEventListener('play', () => {
+      updatePlayState();
+      startVisualizer();
+    });
+
+    audio.addEventListener('pause', () => {
+      updatePlayState();
+      stopVisualizer();
+    });
+
+    audio.addEventListener('ended', () => {
+      loadTrack(currentTrackIndex + 1, true);
+    });
+
+    progress.addEventListener('input', () => {
+      const percent = Number(progress.value);
+      setRangeFill(progress, percent);
+      if (audio.duration) {
+        audio.currentTime = (percent / 100) * audio.duration;
+      }
+    });
+
+    volume.addEventListener('input', () => {
+      audio.volume = Number(volume.value);
+      setRangeFill(volume, Number(volume.value) * 100);
+    });
+
+    setRangeFill(progress, 0);
+    setRangeFill(volume, Number(volume.value) * 100);
+    audio.volume = Number(volume.value);
+    setIdleVisualizer();
+    loadTrack(0, false);
+  </script>
+
+<footer class="site-footer" style="width:100%; text-align:center; display:block; margin:0 auto;"><p style="margin:0; width:100%; text-align:center;">©2026 URDOOMED MUSIC - 1NFUZE - All Rights Reserved</p></footer>
+
+  <div class="profile-modal" id="profileModal" aria-hidden="true">
+    <div class="profile-modal-card" role="dialog" aria-modal="true" aria-labelledby="profileModalName">
+      <button class="profile-modal-close" id="profileModalClose" type="button" aria-label="Close profile">×</button>
+      <div class="profile-modal-body">
+        <div class="profile-modal-visual">
+          <img id="profileModalImage" src="" alt="">
+        </div>
+        <div class="profile-modal-copy">
+          <span class="profile-modal-kicker">1NFUZE Member Profile</span>
+          <h3 id="profileModalName"></h3>
+          <div class="profile-modal-details" id="profileModalDetails"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const memberProfiles = {
+      haejun: {
+        name: "Haejun (해준)",
+        image: "images/hj.png.png",
+        details: {
+          "Birthday": "March 14, 2005",
+          "Birth Sign": "Pisces",
+          "Birth Place": "Suwon, Gyeonggi-do, South Korea",
+          "Favourite Movie": "Train to Busan",
+          "Favourite Bands": "TXT • The 1975",
+          "Quote": "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about."
+        }
+      },
+      jinwoo: {
+        name: "Jinwoo (진우)",
+        image: "images/jw.png",
+        details: {
+          "Birthday": "August 22, 2004",
+          "Birth Sign": "Leo",
+          "Birth Place": "Busan, South Korea",
+          "Favourite Movie": "Your Name",
+          "Favourite Bands": "SEVENTEEN • Bruno Mars",
+          "Quote": "Your support gives me strength every day. Let’s make even more good memories together."
+        }
+      },
+      jayden: {
+        name: "Jayden Lee (제이든 리)",
+        image: "images/jl.png",
+        details: {
+          "Birthday": "November 9, 2003",
+          "Birth Sign": "Scorpio",
+          "Birth Place": "Seoul, South Korea",
+          "Favourite Movie": "La La Land",
+          "Favourite Bands": "EXO • The Weeknd",
+          "Quote": "I always want to show you my best side. Please stay with us and let’s keep moving forward together."
+        }
+      },
+      minjae: {
+        name: "Minjae (민재)",
+        image: "images/mj.png",
+        details: {
+          "Birthday": "January 27, 2004",
+          "Birth Sign": "Aquarius",
+          "Birth Place": "Incheon, South Korea",
+          "Favourite Movie": "Baby Driver",
+          "Favourite Bands": "Stray Kids • Post Malone",
+          "Quote": "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you."
+        }
+      },
+      seonho: {
+        name: "Seonho (선호)",
+        image: "images/sh.png",
+        details: {
+          "Birthday": "June 3, 2005",
+          "Birth Sign": "Gemini",
+          "Birth Place": "Daegu, South Korea",
+          "Favourite Movie": "Spider-Man: Into the Spider-Verse",
+          "Favourite Bands": "NCT DREAM • Keshi",
+          "Quote": "Thank you for looking after us so warmly. I hope our music can stay by your side every day."
+        }
+      }
     };
 
-    applyTranslations(window.currentLanguage);
-  }
+    function setupProfilePopups() {
+      const profileModal = document.getElementById('profileModal');
+      const profileModalClose = document.getElementById('profileModalClose');
+      const profileModalName = document.getElementById('profileModalName');
+      const profileModalDetails = document.getElementById('profileModalDetails');
+      const profileModalImage = document.getElementById('profileModalImage');
+      const profileButtons = document.querySelectorAll('.profile-trigger');
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      setupLanguageToggle();
-      if (typeof setupProfilePopups === 'function') setupProfilePopups();
-      if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
-    });
-  } else {
-    setupLanguageToggle();
-    if (typeof setupProfilePopups === 'function') setupProfilePopups();
-    if (typeof setupMemberQuiz === 'function') setupMemberQuiz();
-  }
-</script>
+      if (!profileModal || !profileModalClose || !profileModalName || !profileModalDetails || !profileModalImage || !profileButtons.length) return;
+
+      function openProfileModal(memberKey) {
+        const profile = memberProfiles[memberKey];
+        if (!profile) return;
+        profileModalName.textContent = profile.name;
+        profileModalDetails.innerHTML = Object.entries(profile.details).map(([label, value]) => {
+          return `<div class="profile-modal-row"><div class="profile-modal-label">${label}:</div><div class="profile-modal-value">${value}</div></div>`;
+        }).join('');
+        profileModalImage.src = profile.image;
+        profileModalImage.alt = profile.name + " profile image";
+        profileModal.classList.add('active');
+        profileModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProfileModal() {
+        profileModal.classList.remove('active');
+        profileModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      profileButtons.forEach(button => {
+        button.addEventListener('click', () => openProfileModal(button.dataset.member));
+      });
+
+      profileModalClose.addEventListener('click', closeProfileModal);
+      profileModal.addEventListener('click', (event) => {
+        if (event.target === profileModal) closeProfileModal();
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && profileModal.classList.contains('active')) closeProfileModal();
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupProfilePopups);
+    } else {
+      setupProfilePopups();
+    }
+  </script>
+
+
+  <div class="quiz-modal" id="memberQuizModal" aria-hidden="true">
+    <div class="quiz-card" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+      <button class="quiz-close" id="quizCloseBtn" type="button" aria-label="Close quiz">×</button>
+      <div class="quiz-inner">
+        <div id="quizStartView">
+          <span class="quiz-kicker">Fan Quiz</span>
+          <h2 class="quiz-title" id="quizTitle">Which 1NFUZE member are you?</h2>
+          <p class="quiz-subtitle">Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.</p>
+          <button class="quiz-btn quiz-btn-primary" type="button" id="quizStartBtn">Start Quiz</button>
+        </div>
+
+        <div id="quizQuestionView" style="display:none;">
+          <div class="quiz-progress" id="quizProgress">Question 1 of 5</div>
+          <h3 class="quiz-question" id="quizQuestionText"></h3>
+          <div class="quiz-options" id="quizOptions"></div>
+          <div class="quiz-nav">
+            <button class="quiz-btn" type="button" id="quizBackBtn">Back</button>
+            <button class="quiz-btn" type="button" id="quizRestartBtn">Restart</button>
+          </div>
+        </div>
+
+        <div class="quiz-result" id="quizResultView">
+          <span class="quiz-kicker">Quiz Result</span>
+          <div class="quiz-result-wrap">
+            <div class="quiz-result-image">
+              <img id="quizResultImage" src="" alt="">
+            </div>
+            <div class="quiz-result-copy">
+              <div class="quiz-result-tag">You are...</div>
+              <h3 id="quizResultName"></h3>
+              <p id="quizResultBlurb"></p>
+              <p id="quizResultBlurb2"></p>
+              <button class="quiz-btn quiz-btn-primary" type="button" id="quizRetakeBtn">Take Quiz Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const quizProfiles = {
+      haejun: {
+        name: "Haejun",
+        image: "images/hj.png.png",
+        blurb: "You have Haejun’s sharp, performance-driven energy. You come across as stylish, expressive, and naturally magnetic, with the kind of confidence that lights up a room without needing to shout.",
+        blurb2: "People are drawn to your cool presence, quick instincts, and creative streak. Underneath that polished edge, you also have warmth, loyalty, and a quiet determination that keeps you moving forward."
+      },
+      jinwoo: {
+        name: "Jinwoo",
+        image: "images/jw.png",
+        blurb: "You match Jinwoo’s calm and dependable vibe. You are thoughtful, easy to be around, and the kind of person who balances a group just by being yourself.",
+        blurb2: "You have a soft charm that makes people feel comfortable, but there is real inner strength there too. Your energy is steady, genuine, and quietly unforgettable."
+      },
+      jayden: {
+        name: "Jayden Lee",
+        image: "images/jl.png",
+        blurb: "You are Jayden Lee: poised, charismatic, and born to stand at the centre. You have a natural star quality that makes people notice you, even when you are doing very little.",
+        blurb2: "There is confidence in the way you carry yourself, but also discipline and focus. You set the tone around you, and people often trust your lead because you make things feel composed and clear."
+      },
+      minjae: {
+        name: "Minjae",
+        image: "images/mj.png",
+        blurb: "You have Minjae’s bold edge and fearless personality. You are energetic, witty, and not afraid to take up space when something matters to you.",
+        blurb2: "Your presence feels lively and memorable, with a spark that keeps things exciting. At the same time, you care deeply about the people around you and bring passion into everything you do."
+      },
+      seonho: {
+        name: "Seonho",
+        image: "images/sh.png",
+        blurb: "You are most like Seonho: graceful, smooth, and quietly captivating. You tend to leave a strong impression through your style, sensitivity, and the way you naturally read the room.",
+        blurb2: "You have a calm confidence that feels elegant rather than loud. People often see you as thoughtful, creative, and someone who brings balance and beauty wherever you go."
+      }
+    };
+
+    const quizQuestions = [
+      {
+        question: "Your friends are planning a night out. What role do you naturally fall into?",
+        options: [
+          { text: "I set the mood and make sure everyone feels hyped.", member: "jayden" },
+          { text: "I keep things relaxed and make sure everyone is comfortable.", member: "jinwoo" },
+          { text: "I bring the chaos and make the night memorable.", member: "minjae" },
+          { text: "I turn up stylish and become the unspoken vibe of the group.", member: "haejun" }
+        ]
+      },
+      {
+        question: "Pick a quality that sounds most like you.",
+        options: [
+          { text: "Elegant and observant", member: "seonho" },
+          { text: "Driven and magnetic", member: "jayden" },
+          { text: "Warm and dependable", member: "jinwoo" },
+          { text: "Bold and expressive", member: "minjae" }
+        ]
+      },
+      {
+        question: "If you were performing on stage, what would be your strongest point?",
+        options: [
+          { text: "My overall presence and centre energy", member: "jayden" },
+          { text: "My movement and stylish performance details", member: "haejun" },
+          { text: "My cool elegance and visual control", member: "seonho" },
+          { text: "My attitude and explosive delivery", member: "minjae" }
+        ]
+      },
+      {
+        question: "What kind of compliment do you like most?",
+        options: [
+          { text: "That I feel calm, kind, and easy to trust", member: "jinwoo" },
+          { text: "That I have amazing style and presence", member: "haejun" },
+          { text: "That I seem confident and unforgettable", member: "jayden" },
+          { text: "That I have unique energy no one else has", member: "seonho" }
+        ]
+      },
+      {
+        question: "Choose the phrase that feels the most 'you'.",
+        options: [
+          { text: "Steady heart, soft strength.", member: "jinwoo" },
+          { text: "Main character without trying.", member: "jayden" },
+          { text: "Sharp style, sharper instinct.", member: "haejun" },
+          { text: "Creative soul with graceful energy.", member: "seonho" }
+        ]
+      }
+    ];
+
+    function setupMemberQuiz() {
+      const quizModal = document.getElementById('memberQuizModal');
+      const quizLaunchBtn = document.getElementById('quizLaunchBtn');
+      const quizCloseBtn = document.getElementById('quizCloseBtn');
+      const quizStartBtn = document.getElementById('quizStartBtn');
+      const quizStartView = document.getElementById('quizStartView');
+      const quizQuestionView = document.getElementById('quizQuestionView');
+      const quizResultView = document.getElementById('quizResultView');
+      const quizProgress = document.getElementById('quizProgress');
+      const quizQuestionText = document.getElementById('quizQuestionText');
+      const quizOptions = document.getElementById('quizOptions');
+      const quizBackBtn = document.getElementById('quizBackBtn');
+      const quizRestartBtn = document.getElementById('quizRestartBtn');
+      const quizRetakeBtn = document.getElementById('quizRetakeBtn');
+      const quizResultImage = document.getElementById('quizResultImage');
+      const quizResultName = document.getElementById('quizResultName');
+      const quizResultBlurb = document.getElementById('quizResultBlurb');
+      const quizResultBlurb2 = document.getElementById('quizResultBlurb2');
+
+      if (!quizModal || !quizLaunchBtn) return;
+
+      let currentQuestion = 0;
+      let answers = [];
+
+      function openQuizModal() {
+        quizModal.classList.add('active');
+        quizModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeQuizModal() {
+        quizModal.classList.remove('active');
+        quizModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function resetQuiz() {
+        currentQuestion = 0;
+        answers = [];
+        quizStartView.style.display = 'block';
+        quizQuestionView.style.display = 'none';
+        quizResultView.classList.remove('active');
+      }
+
+      function renderQuestion() {
+        const item = quizQuestions[currentQuestion];
+        quizProgress.textContent = `Question ${currentQuestion + 1} of ${quizQuestions.length}`;
+        quizQuestionText.textContent = item.question;
+        quizOptions.innerHTML = item.options.map(option => (
+          `<button class="quiz-option" type="button" data-member="${option.member}">${option.text}</button>`
+        )).join('');
+
+        quizOptions.querySelectorAll('.quiz-option').forEach(button => {
+          button.addEventListener('click', () => {
+            answers[currentQuestion] = button.dataset.member;
+            if (currentQuestion < quizQuestions.length - 1) {
+              currentQuestion += 1;
+              renderQuestion();
+            } else {
+              showResult();
+            }
+          });
+        });
+      }
+
+      function showResult() {
+        const scores = { haejun: 0, jinwoo: 0, jayden: 0, minjae: 0, seonho: 0 };
+        answers.forEach(member => { scores[member] += 1; });
+
+        const topMember = Object.entries(scores).sort((a, b) => b[1] - a[1])[0][0];
+        const result = quizProfiles[topMember];
+
+        quizResultImage.src = result.image;
+        quizResultImage.alt = result.name + " result image";
+        quizResultName.textContent = `You are... ${result.name}`;
+        quizResultBlurb.textContent = result.blurb;
+        quizResultBlurb2.textContent = result.blurb2;
+
+        quizQuestionView.style.display = 'none';
+        quizStartView.style.display = 'none';
+        quizResultView.classList.add('active');
+      }
+
+      quizLaunchBtn.addEventListener('click', () => {
+        resetQuiz();
+        openQuizModal();
+      });
+
+      quizCloseBtn.addEventListener('click', closeQuizModal);
+      quizModal.addEventListener('click', (event) => {
+        if (event.target === quizModal) closeQuizModal();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && quizModal.classList.contains('active')) {
+          closeQuizModal();
+        }
+      });
+
+      quizStartBtn.addEventListener('click', () => {
+        quizStartView.style.display = 'none';
+        quizQuestionView.style.display = 'block';
+        renderQuestion();
+      });
+
+      quizBackBtn.addEventListener('click', () => {
+        if (currentQuestion > 0) {
+          currentQuestion -= 1;
+          renderQuestion();
+        } else {
+          quizQuestionView.style.display = 'none';
+          quizStartView.style.display = 'block';
+        }
+      });
+
+      quizRestartBtn.addEventListener('click', resetQuiz);
+      quizRetakeBtn.addEventListener('click', resetQuiz);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupMemberQuiz);
+    } else {
+      setupMemberQuiz();
+    }
+  </script>
+
 </body>
 </html>

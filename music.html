@@ -22,15 +22,19 @@
       margin: 0;
       font-family: Inter, Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at 20% 20%, rgba(121, 71, 255, 0.24), transparent 24%),
-        radial-gradient(circle at 80% 18%, rgba(79, 164, 255, 0.18), transparent 24%),
-        radial-gradient(circle at 50% 60%, rgba(255, 105, 180, 0.10), transparent 24%),
-        linear-gradient(180deg, #04040b 0%, #070815 38%, #070613 100%);
+        linear-gradient(rgba(3, 4, 10, 0.68), rgba(3, 4, 10, 0.78)),
+        url("images/sb-1.png") center center / cover no-repeat fixed;
       color: var(--text);
       min-height: 100vh;
       overflow-x: hidden;
     }
-    a { color: inherit; text-decoration: none; }
+    @media (max-width: 760px) {
+      body {
+        background:
+          linear-gradient(rgba(3, 4, 10, 0.72), rgba(3, 4, 10, 0.82)),
+          url("images/sb-1.png") center center / cover no-repeat;
+      }
+    }a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     .container {
       width: min(calc(100% - 32px), var(--max));
@@ -1857,12 +1861,12 @@
         hero_cta_music: "Music",
         downloads_eyebrow: "Wallpapers",
         downloads_title: "CONTROL Wallpapers",
-        downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile. For GitHub Pages, keep the image files in a static folder such as downloads/ so these buttons can link to them directly.",
+        downloads_body: "Download official 1NFUZE member wallpapers for desktop and mobile.",
         download_desktop: "Desktop",
         download_mobile: "Mobile",
         posters_eyebrow: "Posters",
         posters_title: "CONTROL Posters",
-        posters_body: "Download official 1NFUZE CONTROL era posters. Keep these files in your downloads/ folder on GitHub Pages so the poster buttons work correctly.",
+        posters_body: "Download official 1NFUZE CONTROL era posters.",
         poster_download: "Download Poster",
         countdown_eyebrow: "Countdown",
         countdown_title: "Debut Countdown",
@@ -1931,12 +1935,12 @@
         hero_cta_music: "음악",
         downloads_eyebrow: "월페이퍼",
         downloads_title: "CONTROL 월페이퍼",
-        downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요. GitHub Pages에서는 이미지 파일을 downloads/ 같은 정적 폴더에 넣으면 이 버튼들이 바로 연결됩니다.",
+        downloads_body: "공식 1NFUZE 멤버 월페이퍼를 데스크톱과 모바일 버전으로 다운로드하세요.",
         download_desktop: "데스크톱",
         download_mobile: "모바일",
         posters_eyebrow: "포스터",
         posters_title: "CONTROL 포스터",
-        posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요. GitHub Pages에서는 이 파일들을 downloads/ 폴더에 넣으면 버튼이 정상 작동합니다.",
+        posters_body: "공식 1NFUZE CONTROL 시대 포스터를 다운로드하세요.",
         poster_download: "포스터 다운로드",
         countdown_eyebrow: "카운트다운",
         countdown_title: "데뷔 카운트다운",
