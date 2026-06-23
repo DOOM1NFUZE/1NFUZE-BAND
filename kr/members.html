@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1NFUZE | Members</title>
-<meta content="Official website for 1NFUZE." name="description"/>
+<title>1NFUZE | 멤버</title>
+<meta content="1NFUZE 공식 웹사이트입니다." name="description"/>
 <style>
 
     :root {
@@ -769,7 +769,9 @@
       display: flex;
     }
     .profile-modal-card {
-      width: min(100%, 720px);
+      width: min(100%, 860px);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
       border-radius: 28px;
       border: 1px solid rgba(183, 201, 255, 0.18);
       background:
@@ -854,6 +856,15 @@
     .profile-modal-value {
       color: #d9e4ff;
       line-height: 1.65;
+    }
+    .profile-facts {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 6px;
+    }
+    .profile-facts li {
+      color: #d9e4ff;
     }
     @media (max-width: 760px) {
       .profile-modal-body {
@@ -1469,9 +1480,9 @@
 <div class="container">
 <div class="panel-card fan-feature-card">
 <div class="fan-feature-copy">
-<span class="eyebrow" data-i18n="fan_eyebrow">팬 콘텐츠</span>
-<h2 data-i18n="fan_title">당신은 어떤 1NFUZE 멤버일까요?</h2>
-<p data-i18n="fan_body">1NFUZE 성향 퀴즈를 통해 당신의 에너지, 스타일, 분위기와 가장 잘 맞는 멤버를 확인해 보세요.</p>
+<span class="eyebrow" data-i18n="fan_eyebrow">팬 기능</span>
+<h2 data-i18n="fan_title">나는 어떤 1NFUZE 멤버일까?</h2>
+<p data-i18n="fan_body">1NFUZE 성격 퀴즈를 통해 당신의 에너지, 스타일, 분위기와 가장 잘 맞는 멤버를 찾아보세요.</p>
 </div>
 <div class="fan-feature-action">
 <button class="cta cta-primary fan-feature-btn" data-i18n="fan_button" id="quizLaunchBtn" type="button">퀴즈 시작</button>
@@ -1487,52 +1498,52 @@
 <div class="members-grid">
 <article class="member-card">
 <div class="member-visual">
-<img alt="Haejun profile image" src="../images/hj.png.png"/>
-<button class="profile-trigger" data-member="haejun" type="button" data-i18n="profile_button">Profile</button>
+<img alt="Haejun profile image" src="../images/haejun_casual.png"/>
+<button class="profile-trigger" data-member="haejun" type="button" data-i18n="profile_button">프로필</button>
 </div>
 <h3>Haejun <span style="color: var(--muted); font-weight: 600;">(해준)</span></h3>
 <div class="member-links">
-<span class="chip" data-i18n="animal_haejun">늑대</span>
+<span class="chip">Silk 🪢</span><span class="chip">늑대</span>
 </div>
 </article>
 <article class="member-card">
 <div class="member-visual">
-<img alt="Jinwoo profile image" onerror="this.style.display='none'" src="../images/jw.png"/>
-<button class="profile-trigger" data-member="jinwoo" type="button" data-i18n="profile_button">Profile</button>
+<img alt="Jinwoo profile image" onerror="this.style.display='none'" src="../images/jinwoo_casual.png"/>
+<button class="profile-trigger" data-member="jinwoo" type="button" data-i18n="profile_button">프로필</button>
 </div>
 <h3>Jinwoo <span style="color: var(--muted); font-weight: 600;">(진우)</span></h3>
 <div class="member-links">
-<span class="chip" data-i18n="animal_jinwoo">매</span>
+<span class="chip">Puppy 🐶</span><span class="chip">매</span>
 </div>
 </article>
 <article class="member-card">
 <div class="member-visual">
-<img alt="Jayden Lee profile image" onerror="this.style.display='none'" src="../images/jl.png"/>
-<button class="profile-trigger" data-member="jayden" type="button" data-i18n="profile_button">Profile</button>
+<img alt="Jayden Lee profile image" onerror="this.style.display='none'" src="../images/jayden_casual.png"/>
+<button class="profile-trigger" data-member="jayden" type="button" data-i18n="profile_button">프로필</button>
 </div>
 <h3>Jayden <span style="color: var(--muted); font-weight: 600;">(제이든 리)</span></h3>
 <div class="member-links">
-<span class="chip" data-i18n="animal_jayden">사자</span>
+<span class="chip">Beat ❣️</span><span class="chip">사자</span>
 </div>
 </article>
 <article class="member-card">
 <div class="member-visual">
-<img alt="Minjae profile image" onerror="this.style.display='none'" src="../images/mj.png"/>
-<button class="profile-trigger" data-member="minjae" type="button" data-i18n="profile_button">Profile</button>
+<img alt="Minjae profile image" onerror="this.style.display='none'" src="../images/minjae_casual.png"/>
+<button class="profile-trigger" data-member="minjae" type="button" data-i18n="profile_button">프로필</button>
 </div>
 <h3>Minjae <span style="color: var(--muted); font-weight: 600;">(민재)</span></h3>
 <div class="member-links">
-<span class="chip" data-i18n="animal_minjae">코브라</span>
+<span class="chip">Cookie 🍪</span><span class="chip">코브라</span>
 </div>
 </article>
 <article class="member-card">
 <div class="member-visual">
-<img alt="Seonho profile image" onerror="this.style.display='none'" src="../images/sh.png"/>
-<button class="profile-trigger" data-member="seonho" type="button" data-i18n="profile_button">Profile</button>
+<img alt="Seonho profile image" onerror="this.style.display='none'" src="../images/seonho_casual.png"/>
+<button class="profile-trigger" data-member="seonho" type="button" data-i18n="profile_button">프로필</button>
 </div>
 <h3>Seonho <span style="color: var(--muted); font-weight: 600;">(선호)</span></h3>
 <div class="member-links">
-<span class="chip" data-i18n="animal_seonho">곰</span>
+<span class="chip">Player 🎮</span><span class="chip">곰</span>
 </div>
 </article>
 </div>
@@ -1561,12 +1572,12 @@
 <div class="quiz-inner">
 <div id="quizStartView">
 <span class="quiz-kicker" data-i18n="quiz_kicker">팬 퀴즈</span>
-<h2 class="quiz-title" data-i18n="quiz_title" id="quizTitle">당신은 어떤 1NFUZE 멤버일까요?</h2>
-<p class="quiz-subtitle" data-i18n="quiz_subtitle">다섯 가지 질문에 답하고 당신의 에너지와 가장 잘 어울리는 1NFUZE 멤버를 확인해 보세요.</p>
-<button class="quiz-btn quiz-btn-primary" data-i18n="quiz_start" id="quizStartBtn" type="button">퀴즈 시작</button>
+<h2 class="quiz-title" data-i18n="quiz_title" id="quizTitle">나는 어떤 1NFUZE 멤버일까?</h2>
+<p class="quiz-subtitle" data-i18n="quiz_subtitle">Answer five quick questions and the quiz will match you with the 1NFUZE member whose energy fits you best.</p>
+<button class="quiz-btn quiz-btn-primary" data-i18n="quiz_start" id="quizStartBtn" type="button">Start Quiz</button>
 </div>
 <div id="quizQuestionView" style="display:none;">
-<div class="quiz-progress" id="quizProgress">Question 1 of 5</div>
+<div class="quiz-progress" id="quizProgress">질문 1 / 5</div>
 <h3 class="quiz-question" id="quizQuestionText"></h3>
 <div class="quiz-options" id="quizOptions"></div>
 <div class="quiz-nav">
@@ -1585,9 +1596,7 @@
 <h3 id="quizResultName"></h3>
 <p id="quizResultBlurb"></p>
 <p id="quizResultBlurb2"></p>
-<button class="quiz-btn quiz-btn-primary" data-i18n="quiz_retake" id="quizRetakeBtn" type="button">다시 해보기</button>
-</div>
-</div>
+<button class="quiz-btn quiz-btn-primary" data-i18n="quiz_retake" id="quizRetakeBtn" type="button">다시 하기</button>
 </div>
 </div>
 </div>
@@ -1595,87 +1604,502 @@
 
 <script>
 
+    window.currentLanguage = 'ko';
+
     const memberProfiles = {
-      haejun: {
-        name: { en: "Haejun (해준)", ko: "해준 (Haejun)" },
-        image: "../images/hj.png.png",
-        details: {
-          "Birthday": { en: "March 14, 2005", ko: "2005년 3월 14일" },
-          "Birth Sign": { en: "Pisces", ko: "물고기자리" },
-          "Birth Place": { en: "Suwon, Gyeonggi-do, South Korea", ko: "대한민국 경기도 수원" },
-          "Favourite Movie": { en: "Train to Busan", ko: "부산행" },
-          "Favourite Bands": { en: "TXT • The 1975", ko: "TXT • The 1975" },
-          "Quote": { en: "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about.", ko: "항상 응원해 줘서 고마워요. 여러분이 웃을 수 있도록 더 열심히 할게요." }
-        }
+      "haejun": {
+            "name": {
+                  "en": "Haejun (해준)",
+                  "ko": "해준 (Haejun)"
+            },
+            "image": "images/haejun_casual.png",
+            "details": {
+                  "Stage Name": {
+                        "en": "Haejun",
+                        "ko": "해준"
+                  },
+                  "Korean Name": {
+                        "en": "해준",
+                        "ko": "해준"
+                  },
+                  "Birth Name": {
+                        "en": "Kim Haejun",
+                        "ko": "김해준"
+                  },
+                  "Nickname": {
+                        "en": "Silk",
+                        "ko": "Silk"
+                  },
+                  "Representative Emoji": {
+                        "en": "🪢",
+                        "ko": "🪢"
+                  },
+                  "Position(s)": {
+                        "en": "Leader, Main Vocalist, Lead Dancer",
+                        "ko": "리더, 메인 보컬, 리드 댄서"
+                  },
+                  "Birthday": {
+                        "en": "March 14, 2005",
+                        "ko": "2005년 3월 14일"
+                  },
+                  "Zodiac Sign": {
+                        "en": "Pisces",
+                        "ko": "물고기자리"
+                  },
+                  "Chinese Zodiac Sign": {
+                        "en": "Rooster",
+                        "ko": "닭띠"
+                  },
+                  "Height": {
+                        "en": "178 cm",
+                        "ko": "178 cm"
+                  },
+                  "Weight": {
+                        "en": "61 kg",
+                        "ko": "61 kg"
+                  },
+                  "Blood Type": {
+                        "en": "A",
+                        "ko": "A형"
+                  },
+                  "MBTI Type": {
+                        "en": "INFJ",
+                        "ko": "INFJ"
+                  },
+                  "Nationality": {
+                        "en": "Korean",
+                        "ko": "대한민국"
+                  },
+                  "Birthplace": {
+                        "en": "Suwon, Gyeonggi-do, South Korea",
+                        "ko": "대한민국 경기도 수원"
+                  },
+                  "Totem / Symbol": {
+                        "en": "The Wolf",
+                        "ko": "늑대"
+                  },
+                  "Favourite Movie": {
+                        "en": "Train to Busan",
+                        "ko": "부산행"
+                  },
+                  "Favourite Artists": {
+                        "en": "TXT • The 1975",
+                        "ko": "TXT • The 1975"
+                  },
+                  "Quote": {
+                        "en": "Thank you for always cheering for me. I will keep working hard so I can give you something to smile about.",
+                        "ko": "항상 응원해 줘서 고마워요. 여러분이 웃을 수 있도록 더 열심히 할게요."
+                  },
+                  "Facts": {
+                        "en": "<ul class=\"profile-facts\"><li>Haejun is the leader of 1NFUZE.</li><li>His representative nickname is “Silk.”</li><li>He is known for his calm presence and careful attention to detail.</li><li>His current 1NFUZE concept marker is The Wolf.</li></ul>",
+                        "ko": "<ul class=\"profile-facts\"><li>해준은 1NFUZE의 리더입니다.</li><li>대표 별명은 “Silk”입니다.</li><li>차분한 분위기와 섬세함이 특징입니다.</li><li>현재 콘셉트 상징은 늑대입니다.</li></ul>"
+                  }
+            }
       },
-      jinwoo: {
-        name: { en: "Jinwoo (진우)", ko: "진우 (Jinwoo)" },
-        image: "../images/jw.png",
-        details: {
-          "Birthday": { en: "August 22, 2004", ko: "2004년 8월 22일" },
-          "Birth Sign": { en: "Leo", ko: "사자자리" },
-          "Birth Place": { en: "Busan, South Korea", ko: "대한민국 부산" },
-          "Favourite Movie": { en: "Your Name", ko: "너의 이름은." },
-          "Favourite Bands": { en: "SEVENTEEN • Bruno Mars", ko: "SEVENTEEN • Bruno Mars" },
-          "Quote": { en: "Your support gives me strength every day. Let’s make even more good memories together.", ko: "여러분의 응원이 매일 제 힘이 돼요. 앞으로도 좋은 추억 많이 만들어요." }
-        }
+      "jinwoo": {
+            "name": {
+                  "en": "Jinwoo (진우)",
+                  "ko": "진우 (Jinwoo)"
+            },
+            "image": "images/jinwoo_casual.png",
+            "details": {
+                  "Stage Name": {
+                        "en": "Jinwoo",
+                        "ko": "진우"
+                  },
+                  "Korean Name": {
+                        "en": "진우",
+                        "ko": "진우"
+                  },
+                  "Birth Name": {
+                        "en": "Park Jinwoo",
+                        "ko": "박진우"
+                  },
+                  "Nickname": {
+                        "en": "Puppy",
+                        "ko": "Puppy"
+                  },
+                  "Representative Emoji": {
+                        "en": "🐶",
+                        "ko": "🐶"
+                  },
+                  "Position(s)": {
+                        "en": "Main Dancer, Lead Vocalist, Performance Captain",
+                        "ko": "메인 댄서, 리드 보컬, 퍼포먼스 캡틴"
+                  },
+                  "Birthday": {
+                        "en": "August 22, 2004",
+                        "ko": "2004년 8월 22일"
+                  },
+                  "Zodiac Sign": {
+                        "en": "Leo",
+                        "ko": "사자자리"
+                  },
+                  "Chinese Zodiac Sign": {
+                        "en": "Monkey",
+                        "ko": "원숭이띠"
+                  },
+                  "Height": {
+                        "en": "181 cm",
+                        "ko": "181 cm"
+                  },
+                  "Weight": {
+                        "en": "64 kg",
+                        "ko": "64 kg"
+                  },
+                  "Blood Type": {
+                        "en": "O",
+                        "ko": "O형"
+                  },
+                  "MBTI Type": {
+                        "en": "ENFJ",
+                        "ko": "ENFJ"
+                  },
+                  "Nationality": {
+                        "en": "Korean",
+                        "ko": "대한민국"
+                  },
+                  "Birthplace": {
+                        "en": "Busan, South Korea",
+                        "ko": "대한민국 부산"
+                  },
+                  "Totem / Symbol": {
+                        "en": "The Falcon",
+                        "ko": "매"
+                  },
+                  "Favourite Movie": {
+                        "en": "Your Name",
+                        "ko": "너의 이름은."
+                  },
+                  "Favourite Artists": {
+                        "en": "SEVENTEEN • Bruno Mars",
+                        "ko": "SEVENTEEN • Bruno Mars"
+                  },
+                  "Quote": {
+                        "en": "Your support gives me strength every day. Let’s make even more good memories together.",
+                        "ko": "여러분의 응원이 매일 제 힘이 돼요. 앞으로도 좋은 추억 많이 만들어요."
+                  },
+                  "Facts": {
+                        "en": "<ul class=\"profile-facts\"><li>Jinwoo is a member of 1NFUZE.</li><li>His representative nickname is “Puppy.”</li><li>He is known for bright stage energy and a confident performance style.</li><li>His current 1NFUZE concept marker is The Falcon.</li></ul>",
+                        "ko": "<ul class=\"profile-facts\"><li>진우는 1NFUZE의 멤버입니다.</li><li>대표 별명은 “Puppy”입니다.</li><li>밝은 에너지와 자신감 있는 퍼포먼스가 특징입니다.</li><li>현재 콘셉트 상징은 매입니다.</li></ul>"
+                  }
+            }
       },
-      jayden: {
-        name: { en: "Jayden Lee (제이든 리)", ko: "제이든 리 (Jayden Lee)" },
-        image: "../images/jl.png",
-        details: {
-          "Birthday": { en: "November 9, 2003", ko: "2003년 11월 9일" },
-          "Birth Sign": { en: "Scorpio", ko: "전갈자리" },
-          "Birth Place": { en: "Seoul, South Korea", ko: "대한민국 서울" },
-          "Favourite Movie": { en: "La La Land", ko: "라라랜드" },
-          "Favourite Bands": { en: "EXO • The Weeknd", ko: "EXO • The Weeknd" },
-          "Quote": { en: "I always want to show you my best side. Please stay with us and let’s keep moving forward together.", ko: "항상 제 최고의 모습을 보여드리고 싶어요. 앞으로도 저희와 함께 걸어가 주세요." }
-        }
+      "jayden": {
+            "name": {
+                  "en": "Jayden Lee (제이든 리)",
+                  "ko": "제이든 리 (Jayden Lee)"
+            },
+            "image": "images/jayden_casual.png",
+            "details": {
+                  "Stage Name": {
+                        "en": "Jayden",
+                        "ko": "제이든"
+                  },
+                  "Korean Name": {
+                        "en": "제이든 리",
+                        "ko": "제이든 리"
+                  },
+                  "Birth Name": {
+                        "en": "Lee Jayden",
+                        "ko": "이제이든"
+                  },
+                  "Nickname": {
+                        "en": "Beat",
+                        "ko": "Beat"
+                  },
+                  "Representative Emoji": {
+                        "en": "❣️",
+                        "ko": "❣️"
+                  },
+                  "Position(s)": {
+                        "en": "Main Vocalist, Visual, Center",
+                        "ko": "메인 보컬, 비주얼, 센터"
+                  },
+                  "Birthday": {
+                        "en": "November 9, 2003",
+                        "ko": "2003년 11월 9일"
+                  },
+                  "Zodiac Sign": {
+                        "en": "Scorpio",
+                        "ko": "전갈자리"
+                  },
+                  "Chinese Zodiac Sign": {
+                        "en": "Goat",
+                        "ko": "양띠"
+                  },
+                  "Height": {
+                        "en": "183 cm",
+                        "ko": "183 cm"
+                  },
+                  "Weight": {
+                        "en": "66 kg",
+                        "ko": "66 kg"
+                  },
+                  "Blood Type": {
+                        "en": "AB",
+                        "ko": "AB형"
+                  },
+                  "MBTI Type": {
+                        "en": "INTJ",
+                        "ko": "INTJ"
+                  },
+                  "Nationality": {
+                        "en": "Korean",
+                        "ko": "대한민국"
+                  },
+                  "Birthplace": {
+                        "en": "Seoul, South Korea",
+                        "ko": "대한민국 서울"
+                  },
+                  "Totem / Symbol": {
+                        "en": "The Lion",
+                        "ko": "사자"
+                  },
+                  "Favourite Movie": {
+                        "en": "La La Land",
+                        "ko": "라라랜드"
+                  },
+                  "Favourite Artists": {
+                        "en": "EXO • The Weeknd",
+                        "ko": "EXO • The Weeknd"
+                  },
+                  "Quote": {
+                        "en": "I always want to show you my best side. Please stay with us and let’s keep moving forward together.",
+                        "ko": "항상 제 최고의 모습을 보여드리고 싶어요. 앞으로도 저희와 함께 걸어가 주세요."
+                  },
+                  "Facts": {
+                        "en": "<ul class=\"profile-facts\"><li>Jayden is a member of 1NFUZE.</li><li>His representative nickname is “Beat.”</li><li>He is known for a polished image and controlled, expressive stage presence.</li><li>His current 1NFUZE concept marker is The Lion.</li></ul>",
+                        "ko": "<ul class=\"profile-facts\"><li>제이든은 1NFUZE의 멤버입니다.</li><li>대표 별명은 “Beat”입니다.</li><li>세련된 이미지와 절제된 표현력이 특징입니다.</li><li>현재 콘셉트 상징은 사자입니다.</li></ul>"
+                  }
+            }
       },
-      minjae: {
-        name: { en: "Minjae (민재)", ko: "민재 (Minjae)" },
-        image: "../images/mj.png",
-        details: {
-          "Birthday": { en: "January 27, 2004", ko: "2004년 1월 27일" },
-          "Birth Sign": { en: "Aquarius", ko: "물병자리" },
-          "Birth Place": { en: "Incheon, South Korea", ko: "대한민국 인천" },
-          "Favourite Movie": { en: "Baby Driver", ko: "베이비 드라이버" },
-          "Favourite Bands": { en: "Stray Kids • Post Malone", ko: "Stray Kids • Post Malone" },
-          "Quote": { en: "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you.", ko: "저를 믿어 줄 때마다 더 자신감이 생겨요. 저도 그 에너지를 다시 돌려드리고 싶어요." }
-        }
+      "minjae": {
+            "name": {
+                  "en": "Minjae (민재)",
+                  "ko": "민재 (Minjae)"
+            },
+            "image": "images/minjae_casual.png",
+            "details": {
+                  "Stage Name": {
+                        "en": "Minjae",
+                        "ko": "민재"
+                  },
+                  "Korean Name": {
+                        "en": "민재",
+                        "ko": "민재"
+                  },
+                  "Birth Name": {
+                        "en": "Choi Minjae",
+                        "ko": "최민재"
+                  },
+                  "Nickname": {
+                        "en": "Cookie",
+                        "ko": "Cookie"
+                  },
+                  "Representative Emoji": {
+                        "en": "🍪",
+                        "ko": "🍪"
+                  },
+                  "Position(s)": {
+                        "en": "Main Rapper, Lead Dancer, Producer",
+                        "ko": "메인 래퍼, 리드 댄서, 프로듀서"
+                  },
+                  "Birthday": {
+                        "en": "January 27, 2004",
+                        "ko": "2004년 1월 27일"
+                  },
+                  "Zodiac Sign": {
+                        "en": "Aquarius",
+                        "ko": "물병자리"
+                  },
+                  "Chinese Zodiac Sign": {
+                        "en": "Monkey",
+                        "ko": "원숭이띠"
+                  },
+                  "Height": {
+                        "en": "176 cm",
+                        "ko": "176 cm"
+                  },
+                  "Weight": {
+                        "en": "60 kg",
+                        "ko": "60 kg"
+                  },
+                  "Blood Type": {
+                        "en": "B",
+                        "ko": "B형"
+                  },
+                  "MBTI Type": {
+                        "en": "ISTP",
+                        "ko": "ISTP"
+                  },
+                  "Nationality": {
+                        "en": "Korean",
+                        "ko": "대한민국"
+                  },
+                  "Birthplace": {
+                        "en": "Incheon, South Korea",
+                        "ko": "대한민국 인천"
+                  },
+                  "Totem / Symbol": {
+                        "en": "The Cobra",
+                        "ko": "코브라"
+                  },
+                  "Favourite Movie": {
+                        "en": "Baby Driver",
+                        "ko": "베이비 드라이버"
+                  },
+                  "Favourite Artists": {
+                        "en": "Stray Kids • Post Malone",
+                        "ko": "Stray Kids • Post Malone"
+                  },
+                  "Quote": {
+                        "en": "Whenever you believe in me, I feel more confident. I hope I can give that same energy back to you.",
+                        "ko": "저를 믿어 줄 때마다 더 자신감이 생겨요. 저도 그 에너지를 다시 돌려드리고 싶어요."
+                  },
+                  "Facts": {
+                        "en": "<ul class=\"profile-facts\"><li>Minjae is a member of 1NFUZE.</li><li>His representative nickname is “Cookie.”</li><li>He is known for sharp timing, dry humour, and a cool performance style.</li><li>His current 1NFUZE concept marker is The Cobra.</li></ul>",
+                        "ko": "<ul class=\"profile-facts\"><li>민재는 1NFUZE의 멤버입니다.</li><li>대표 별명은 “Cookie”입니다.</li><li>날카로운 타이밍과 쿨한 퍼포먼스가 특징입니다.</li><li>현재 콘셉트 상징은 코브라입니다.</li></ul>"
+                  }
+            }
       },
-      seonho: {
-        name: { en: "Seonho (선호)", ko: "선호 (Seonho)" },
-        image: "../images/sh.png",
-        details: {
-          "Birthday": { en: "June 3, 2005", ko: "2005년 6월 3일" },
-          "Birth Sign": { en: "Gemini", ko: "쌍둥이자리" },
-          "Birth Place": { en: "Daegu, South Korea", ko: "대한민국 대구" },
-          "Favourite Movie": { en: "Spider-Man: Into the Spider-Verse", ko: "스파이더맨: 뉴 유니버스" },
-          "Favourite Bands": { en: "NCT DREAM • Keshi", ko: "NCT DREAM • Keshi" },
-          "Quote": { en: "Thank you for looking after us so warmly. I hope our music can stay by your side every day.", ko: "늘 따뜻하게 아껴 주셔서 감사해요. 저희 음악이 여러분의 하루 곁에 머물면 좋겠어요." }
-        }
+      "seonho": {
+            "name": {
+                  "en": "Seonho (선호)",
+                  "ko": "선호 (Seonho)"
+            },
+            "image": "images/seonho_casual.png",
+            "details": {
+                  "Stage Name": {
+                        "en": "Seonho",
+                        "ko": "선호"
+                  },
+                  "Korean Name": {
+                        "en": "선호",
+                        "ko": "선호"
+                  },
+                  "Birth Name": {
+                        "en": "Kang Seonho",
+                        "ko": "강선호"
+                  },
+                  "Nickname": {
+                        "en": "Player",
+                        "ko": "Player"
+                  },
+                  "Representative Emoji": {
+                        "en": "🎮",
+                        "ko": "🎮"
+                  },
+                  "Position(s)": {
+                        "en": "Vocalist, Maknae, Mood Maker",
+                        "ko": "보컬, 막내, 분위기 메이커"
+                  },
+                  "Birthday": {
+                        "en": "June 3, 2005",
+                        "ko": "2005년 6월 3일"
+                  },
+                  "Zodiac Sign": {
+                        "en": "Gemini",
+                        "ko": "쌍둥이자리"
+                  },
+                  "Chinese Zodiac Sign": {
+                        "en": "Rooster",
+                        "ko": "닭띠"
+                  },
+                  "Height": {
+                        "en": "179 cm",
+                        "ko": "179 cm"
+                  },
+                  "Weight": {
+                        "en": "63 kg",
+                        "ko": "63 kg"
+                  },
+                  "Blood Type": {
+                        "en": "A",
+                        "ko": "A형"
+                  },
+                  "MBTI Type": {
+                        "en": "ISFP",
+                        "ko": "ISFP"
+                  },
+                  "Nationality": {
+                        "en": "Korean",
+                        "ko": "대한민국"
+                  },
+                  "Birthplace": {
+                        "en": "Daegu, South Korea",
+                        "ko": "대한민국 대구"
+                  },
+                  "Totem / Symbol": {
+                        "en": "The Bear",
+                        "ko": "곰"
+                  },
+                  "Favourite Movie": {
+                        "en": "Spider-Man: Into the Spider-Verse",
+                        "ko": "스파이더맨: 뉴 유니버스"
+                  },
+                  "Favourite Artists": {
+                        "en": "NCT DREAM • Keshi",
+                        "ko": "NCT DREAM • Keshi"
+                  },
+                  "Quote": {
+                        "en": "Thank you for looking after us so warmly. I hope our music can stay by your side every day.",
+                        "ko": "늘 따뜻하게 아껴 주셔서 감사해요. 저희 음악이 여러분의 하루 곁에 머물면 좋겠어요."
+                  },
+                  "Facts": {
+                        "en": "<ul class=\"profile-facts\"><li>Seonho is a member of 1NFUZE.</li><li>His representative nickname is “Player.”</li><li>He is known for his warm personality and gentle humour.</li><li>His current 1NFUZE concept marker is The Bear.</li></ul>",
+                        "ko": "<ul class=\"profile-facts\"><li>선호는 1NFUZE의 멤버입니다.</li><li>대표 별명은 “Player”입니다.</li><li>따뜻한 성격과 부드러운 유머가 특징입니다.</li><li>현재 콘셉트 상징은 곰입니다.</li></ul>"
+                  }
+            }
       }
-    };
+};
 
     const detailLabels = {
-      en: {
-        "Birthday": "Birthday",
-        "Birth Sign": "Birth Sign",
-        "Birth Place": "Birth Place",
-        "Favourite Movie": "Favourite Movie",
-        "Favourite Bands": "Favourite Bands",
-        "Quote": "Quote"
+      "en": {
+            "Stage Name": "Stage Name",
+            "Korean Name": "Korean Name",
+            "Birth Name": "Birth Name",
+            "Nickname": "Nickname",
+            "Representative Emoji": "Representative Emoji",
+            "Position(s)": "Position(s)",
+            "Birthday": "Birthday",
+            "Zodiac Sign": "Zodiac Sign",
+            "Chinese Zodiac Sign": "Chinese Zodiac Sign",
+            "Height": "Height",
+            "Weight": "Weight",
+            "Blood Type": "Blood Type",
+            "MBTI Type": "MBTI Type",
+            "Nationality": "Nationality",
+            "Birthplace": "Birthplace",
+            "Totem / Symbol": "Totem / Symbol",
+            "Favourite Movie": "Favourite Movie",
+            "Favourite Artists": "Favourite Artists",
+            "Quote": "Quote",
+            "Facts": "정보"
       },
-      ko: {
-        "Birthday": "생일",
-        "Birth Sign": "별자리",
-        "Birth Place": "출생지",
-        "Favourite Movie": "좋아하는 영화",
-        "Favourite Bands": "좋아하는 아티스트",
-        "Quote": "한마디"
+      "ko": {
+            "Stage Name": "활동명",
+            "Korean Name": "한국 이름",
+            "Birth Name": "본명",
+            "Nickname": "별명",
+            "Representative Emoji": "대표 이모지",
+            "Position(s)": "포지션",
+            "Birthday": "생일",
+            "Zodiac Sign": "별자리",
+            "Chinese Zodiac Sign": "띠",
+            "Height": "키",
+            "Weight": "몸무게",
+            "Blood Type": "혈액형",
+            "MBTI Type": "MBTI",
+            "Nationality": "국적",
+            "Birthplace": "출생지",
+            "Totem / Symbol": "토템 / 상징",
+            "Favourite Movie": "좋아하는 영화",
+            "Favourite Artists": "좋아하는 아티스트",
+            "Quote": "한마디",
+            "Facts": "정보"
       }
-    };
+};
 
     function setupProfilePopups() {
       const profileModal = document.getElementById('profileModal');
@@ -1727,7 +2151,7 @@
     const quizProfiles = {
       haejun: {
         name: { en: "Haejun", ko: "해준" },
-        image: "../images/hj.png.png",
+        image: "../images/haejun_casual.png",
         blurb: {
           en: "You have Haejun’s sharp, performance-driven energy. You come across as stylish, expressive, and naturally magnetic, with the kind of confidence that lights up a room without needing to shout.",
           ko: "당신은 해준의 날카롭고 퍼포먼스 중심적인 에너지를 지녔어요. 세련되고 표현력이 풍부하며, 굳이 소리치지 않아도 존재감이 빛나는 타입입니다."
@@ -1739,7 +2163,7 @@
       },
       jinwoo: {
         name: { en: "Jinwoo", ko: "진우" },
-        image: "../images/jw.png",
+        image: "../images/jinwoo_casual.png",
         blurb: {
           en: "You match Jinwoo’s calm and dependable vibe. You are thoughtful, easy to be around, and the kind of person who balances a group just by being yourself.",
           ko: "당신은 진우의 차분하고 믿음직한 분위기와 닮아 있어요. 배려심이 깊고 편안한 사람이며, 있는 그대로만으로도 팀의 균형을 잡아 주는 타입입니다."
@@ -1751,7 +2175,7 @@
       },
       jayden: {
         name: { en: "Jayden Lee", ko: "제이든 리" },
-        image: "../images/jl.png",
+        image: "../images/jayden_casual.png",
         blurb: {
           en: "You are Jayden Lee: poised, charismatic, and born to stand at the centre. You have a natural star quality that makes people notice you, even when you are doing very little.",
           ko: "당신은 제이든 리 타입입니다. 침착하고 카리스마 있으며, 자연스럽게 중심에 서게 되는 사람입니다. 큰 행동을 하지 않아도 사람들의 시선을 끄는 타고난 스타성이 있어요."
@@ -1763,7 +2187,7 @@
       },
       minjae: {
         name: { en: "Minjae", ko: "민재" },
-        image: "../images/mj.png",
+        image: "../images/minjae_casual.png",
         blurb: {
           en: "You have Minjae’s bold edge and fearless personality. You are energetic, witty, and not afraid to take up space when something matters to you.",
           ko: "당신은 민재의 대담한 에지와 겁 없는 성격을 지녔어요. 에너지가 넘치고 센스 있으며, 중요한 순간에는 주저하지 않고 존재감을 드러내는 타입입니다."
@@ -1775,7 +2199,7 @@
       },
       seonho: {
         name: { en: "Seonho", ko: "선호" },
-        image: "../images/sh.png",
+        image: "../images/seonho_casual.png",
         blurb: {
           en: "You are most like Seonho: graceful, smooth, and quietly captivating. You tend to leave a strong impression through your style, sensitivity, and the way you naturally read the room.",
           ko: "당신은 선호와 가장 닮아 있습니다. 우아하고 부드러우며 조용히 시선을 사로잡는 타입이에요. 스타일과 섬세함, 분위기를 읽는 감각으로 강한 인상을 남깁니다."
@@ -1995,7 +2419,8 @@
     })();
   
   </script>
-</div></div></div></div></div><script>
+
+<script>
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", () => {
       if (typeof setupProfilePopups === "function") setupProfilePopups();
